@@ -1,6 +1,6 @@
-@import "../assets/Fonts/Helvet/stylesheet.css";
-@import "../assets/Fonts/neueLTD/stylesheet.css";
-@import "../assets/Fonts/Esteso/fonts.css";
+@import "/assets/Fonts/Helvet/stylesheet.css";
+@import "/assets/Fonts/neueLTD/stylesheet.css";
+@import "/assets/Fonts/Esteso/fonts.css";
 
 
 :root {
@@ -11,7 +11,7 @@
     --Nero : rgb(0, 0, 0);
     --Nsecondi: 0.3s;
     --nuBelluVerde: #9dff1d;
-    --nuBelluGrigio: #3f3f3f;
+    --nuBelluGrigio: #131313;
     --radius : 8px;
 }
 
@@ -60,6 +60,8 @@ body{
 
 
 
+
+
 .extendedFont {
     font-family: "Esteso";
 }
@@ -79,6 +81,7 @@ body{
 
 
 .contenitore {
+    
     row-gap: 2em;
 }
 
@@ -234,6 +237,7 @@ body{
 
 .cpu {
     background-color: rgba(246, 248, 255, 0.103);
+    
     padding: 15px 20px;
     border: 1px solid rgba(255, 255, 255, 0.685);
     border-radius: var(--radius);
@@ -250,6 +254,8 @@ body{
 .cpu:hover {
     padding-bottom:200px;
     padding-right:200px;
+
+    
     
     z-index: 2;
     

@@ -53,6 +53,12 @@ export async function getServerSideProps(context) {
 
 
  const Home = props => {
+
+
+  var today = new Date();
+    var Oggi = today.getDate() + "." + today.getMonth() + "."  + today.getFullYear();
+
+
   return (
     <div>
       <Head>
@@ -66,6 +72,8 @@ export async function getServerSideProps(context) {
       </Head>
       <body>
       <div className="center ottanta" onClick={() => {return true}}>
+
+        
         <div className="contenitore center">
 
 
