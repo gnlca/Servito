@@ -216,7 +216,10 @@ body{
 }
 
 
+.widgettino  {
+    font-size: x-large;
 
+}
 
 
 
@@ -284,6 +287,7 @@ footer {
    width: 100%;
    color: rgba(255, 255, 255, 0.3);
    padding:5px 10px;
+   z-index: 2;
 }
 
 @keyframes appear {
@@ -321,10 +325,17 @@ footer {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .griglia {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    /* .griglia {
+        grid-template-columns: repeat(3, 1fr);
+    } */
 
+    .CpuTemp {
+        font-size: medium;
+    }
+    .widgettino {
+        font-size: medium;
+    
+    }
 
     
   }
