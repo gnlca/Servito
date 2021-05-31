@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('Helvetica-Oblique.woff2') format('woff2'),
+        url('Helvetica-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('Helvetica-LightOblique.woff2') format('woff2'),
+        url('Helvetica-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('Helvetica-Light.woff2') format('woff2'),
+        url('Helvetica-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('Helvetica.woff2') format('woff2'),
+        url('Helvetica.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('Helvetica-BoldOblique.woff2') format('woff2'),
+        url('Helvetica-BoldOblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('Helvetica-Bold.woff2') format('woff2'),
+        url('Helvetica-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+

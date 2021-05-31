@@ -1,0 +1,30 @@
+
+
+/* Thin */
+@font-face {
+    font-family: 'Esteso Thin';
+    src: url('Esteso.woff2') format('woff2'),
+        url('Esteso.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Esteso';
+    src: url('3b2c728a4bb6aad9c5f6c18c076b247a.woff2') format('woff2'),
+        url('3b2c728a4bb6aad9c5f6c18c076b247a.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Medium */
+@font-face {
+    font-family: 'Esteso Medium';
+    src: url('2839165139f9c233eaed88cb360228a7.woff2') format('woff2'),
+        url('2839165139f9c233eaed88cb360228a7.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
