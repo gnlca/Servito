@@ -8,20 +8,23 @@ function WidgetsData() {
   async function fetchAPI(api_url) {
     const res = await fetch(api_url);
     const data = await res.json();
-    console.log(data);
+    // console.log(data);
     return data;
   }
 
   async function formatData() {}
-
-  return fetchAPI(Metrics_URL);
+  const data = fetchAPI(Metrics_URL);
+  console.log(data)
+  return(data) ;
 }
 
 const Widgets = () => {
   const [dati, setDati] = useState({});
 
+
   useEffect(() => {
-    setDati(WidgetsData());
+    
+    
   }, []);
 
   return (
@@ -29,7 +32,7 @@ const Widgets = () => {
       <div className="griglia">
         <div className="cpu  extendedFont">
           cpu
-          <CpuTemp temperature={dati.temperature} />
+          {/* <CpuTemp /> */}
         </div>
         <div className="cpu  extendedFont">
           freeRam

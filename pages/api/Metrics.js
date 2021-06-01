@@ -8,27 +8,29 @@ export default function Metrics(req, res) {
     temperature: "/sys/class/thermal/thermal_zone0/temp",
     meminfo: "/proc/meminfo",
     hostname: "/etc/hostname",
-    version: "proc/version",
-    ciccio: "/Users/gianlucandretta/Desktop/minchia.txt",
+    version: "/proc/version",
   };
 
-  function fetchData(path) {
-    if (!fs.existsSync(path)) {
-      res.status(500).json({ error: "File doesn't exists" });
-    }
-
-    try {
+  function fetchFile(path) {
+    if (fs.existsSync(path)) {
       const data = fs.readFileSync(path, "utf8");
-      console.log(data);
-      res.status(200).json({ temperature: data });
-    } catch (err) {
-      console.error(err);
-      res.status(500).json({ error: err });
+
+      return data;
+    } else {
+      // res.status(500).json({ error: "FILE NON ESISTE" });
+      return null;
     }
   }
 
-  console.log(paths["ciccio"]);
-  fetchData(paths["ciccio"]);
+  function fetchData(percorsi) {
+    const Risposta = {};
 
+    for (const [key, value] of Object.entries(percorsi)) {
+      Risposta[key] = fetchFile(value);
+    }
 
+    res.status(200).json(Risposta);
+  }
+
+  fetchData(paths);
 }
