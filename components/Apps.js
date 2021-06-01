@@ -28,7 +28,7 @@ function Apps() {
                         {/* <Icon name="code" size={23} fill="#ffffff"/> */}
                         {/* <img src={ciccio} style={{fill:"#ffffff",filter:"invert(100%)"}}/> */}
                         {/* <img  src={svgs[0]}/> */}
-                        <Image  src="/assets/img/code2.svg" width={24}  height={24} fill="white"/>
+                        <Image  src="/assets/img/code2.svg" width={24}  height={24} />
                         <span>Codeserver</span>
                 </a></li>
     

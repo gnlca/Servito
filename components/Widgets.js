@@ -4,13 +4,55 @@ import React from 'react';
 import CpuTemp from './Widgets/CpuTemp';
 
 
-const Widgets = props => {
+
+function WidgetsData() {
+
+
+    const Metrics_URL = "/api/Metrics";
+
+    async function fetchAPI(api_url) {
+        
+        const res = await fetch(api_url);
+        // if(!res.ok) {
+        //     console.log("ERRORE GRAVISSIMISSSIMO")
+        //     return(null)
+        // }
+        const data = await res.text()
+        console.log(data);
+        return(data);
+    }
+
+    async function formatData() {
+        const json = await fetchAPI(Metrics_URL);
+        
+        
+
+
+
+    }
+
+
+}
+
+
+
+
+
+const Widgets = () => {
+
+
+
+
+
+
+
+
 
     return(
         <div className="Widgets">
             <div className="griglia">
 
-                <div className="cpu  extendedFont">cpu<CpuTemp temperature={props.temperature}/></div>
+                <div className="cpu  extendedFont">cpu<CpuTemp/></div>
                 <div className="cpu  extendedFont" > freeRam<br/><span className="widgettino">1338MB</span></div>
                 <div className="cpu  extendedFont">hostname<br/><span className="widgettino">agpi</span></div>
 
