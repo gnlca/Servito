@@ -281,13 +281,13 @@ body{
 footer {
     background-color: var(--Nero);
     position: fixed;
-    border-top: 1px solid rgba(255, 255, 255, var(--Opacità));
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   color: rgba(255, 255, 255, 0.3);
-   padding:5px 10px;
-   z-index: 2;
+    /* border-top: 1px solid rgba(255, 255, 255, var(--Opacità)); */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgba(255, 255, 255, 0.3);
+    padding:5px 10px;
+    z-index: 2;
 }
 
 @keyframes appear {
