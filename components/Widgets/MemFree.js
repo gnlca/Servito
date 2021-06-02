@@ -5,8 +5,6 @@ const MemFree = (props) => {
 
     const [memInfo, setMemInfo] = useState();
 
-
-
     function formattedData(data) {
         var formatted = {};
         var lista = data.split("\n");
@@ -17,7 +15,7 @@ const MemFree = (props) => {
         }
         return formatted;
     }
-
+    
 
     useEffect(() => {
 

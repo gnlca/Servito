@@ -7,6 +7,7 @@ import SearchBox from '../components/SearchBox';
 import Apps from '../components/Apps';
 import WeatherData from '../components/WeatherData';
 import Widgets from  '../components/Widgets';
+
 import Footer from '../components/Footer';
 
 

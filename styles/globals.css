@@ -1,6 +1,6 @@
-@import "/assets/Fonts/Helvet/stylesheet.css";
-@import "/assets/Fonts/neueLTD/stylesheet.css";
-@import "/assets/Fonts/Esteso/fonts.css";
+@import "../assets/Fonts/Helvet/stylesheet.css";
+@import "../assets/Fonts/neueLTD/stylesheet.css";
+@import "../assets/Fonts/Esteso/fonts.css";
 
 
 :root {
@@ -207,13 +207,17 @@ body{
     color: inherit;
     text-decoration: none;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows:  fit-content(24px) 1fr;
     row-gap: .5em;
     justify-items: center;
     align-items: center;
-    fill: var(--Bianco);
 
 }
+
+/* 
+.Apps svg {
+    fill:white !important;
+} */
 
 
 .widgettino  {
@@ -271,24 +275,42 @@ body{
 
 .Widgets {
     display: grid;
-    row-gap: 1em;;
+    row-gap: 1em;
     justify-items: center;
     align-items: center;
     max-width: min-content;
 }
 
 
+
+
+
 footer {
     background-color: var(--Nero);
     position: fixed;
+    overflow:auto;
     /* border-top: 1px solid rgba(255, 255, 255, var(--Opacità)); */
     left: 0;
     bottom: 0;
+    margin:0;
     width: 100%;
     color: rgba(255, 255, 255, 0.3);
-    padding:5px 10px;
     z-index: 2;
 }
+
+.footeroni {
+    padding: 5px 10px 5px 10px; 
+     display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.pesc {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,fit-content(100%));
+}
+
 
 @keyframes appear {
     0% {
@@ -299,6 +321,7 @@ footer {
       filter: opacity(100%);
     }
   }
+
 
 
 @media only screen and (max-width: 600px) {

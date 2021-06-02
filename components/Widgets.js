@@ -12,7 +12,6 @@ const Widgets = () => {
 
 
 
-
   async function fetchAPI(api_url) {
     const res = await fetch(api_url);
     const data = await res.json();
