@@ -19,6 +19,7 @@
 html {
     scroll-behavior: smooth;
     height:  100vh;
+    width: 100%;
     
   }
   
@@ -40,8 +41,8 @@ body{
      background-size: 400% 400%;
     background-position: 50% 0%; */
 
-    max-height: 100%;
-    /* background: linear-gradient(rgba(0, 0, 0, 0.3) , rgba(0, 0, 0, 0.3)), url("./assets/img/wallpaper.JPG") no-repeat center center fixed; 
+    /* max-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)), url("../assets/img/ndrt3d.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -286,7 +287,8 @@ body{
 
 
 footer {
-    background-color: var(--Nero);
+    /* background: linear-gradient(rgba(0, 0, 0, 0) , rgb(0, 0, 0) 70%); */
+    background-color: #000;
     position: fixed;
     overflow:auto;
     /* border-top: 1px solid rgba(255, 255, 255, var(--Opacità)); */
@@ -299,17 +301,31 @@ footer {
 }
 
 .footeroni {
-    padding: 5px 10px 5px 10px; 
+    padding: 15px 20px 15px 20px; 
      display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr  fit-content(100%) fit-content(100%);
+    column-gap: 1em;
 }
 
-.pesc {
+
+.instagram {
+    justify-content: end;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2,fit-content(100%));
+
+}
+
+
+
+.github {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2,fit-content(100%));
 }
+
+
 
 
 @keyframes appear {
