@@ -6,7 +6,7 @@ import { resolve } from "path";
 export default function Metrics(req, res) {
   const paths = {
     // temperature: "/sys/class/thermal/thermal_zone0/temp",
-    temperature: "/Users/gianlucandretta/Desktop/minchia.txt",
+    temperature: "/sys/class/thermal/thermal_zone0/temp",
     meminfo: "/proc/meminfo",
     hostname: "/etc/hostname",
     version: "/proc/version",

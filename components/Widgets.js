@@ -11,7 +11,7 @@ const Widgets = () => {
   const [metrics, setMetrics] = useState({});
 
 
-  const Metrics_URL = "http://localhost:3000/api/Metrics";
+  
 
   async function fetchAPI(api_url) {
     const res = await fetch(api_url);
@@ -23,6 +23,8 @@ const Widgets = () => {
 
 
   useEffect(() => {
+
+    const Metrics_URL = `http://${window.location.host}/api/Metrics`;
 
     
     fetchAPI(Metrics_URL);
