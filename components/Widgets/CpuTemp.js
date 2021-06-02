@@ -1,18 +1,21 @@
-import React, { useState, useEffect, useRef } from "react";
+import { React, useState, useEffect, useRef } from "react";
 
-export default function CpuTemp(props) {
-  const [cpuTemp, setCpuTemp] = React.useState();
+const CpuTemp = (props) => {
+  const [cpuTemp, setCpuTemp] = useState(0);
 
-  async function formattedData(data) {
-    var temp = parseInt(data) / 1000;
-    setCpuTemp(temp);
+  function formattedData(data) {
+    var temp = parseInt(data.replace(/(\r\n|\n|\r)/gm, "")) / 1000;
+    return (temp);
   }
 
 
-  React.useEffect(() => {
+  useEffect(() => {
 
-    if (props.temperature != undefined) setCpuTemp(formattedData(props.temperature));
-    
+    if (props.temperature != undefined) {
+      setCpuTemp(formattedData(props.temperature));
+    }
+
+
   }, [props.temperature]);
 
   return (
@@ -21,5 +24,9 @@ export default function CpuTemp(props) {
     </div>
   );
 };
+
+export default CpuTemp;
+
+
 
 

@@ -1,7 +1,4 @@
 import React from 'react';
-
-
-
 import Image from 'next/image'
 
 
@@ -14,10 +11,6 @@ function Apps() {
     //     return images;
     // }, {} )
     // console.log(svgs);
-
-
-    
-    
 
 
     return(

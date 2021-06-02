@@ -3,20 +3,20 @@ import { React, useEffect, useState } from 'react';
 
 import CpuTemp from './Widgets/CpuTemp';
 import SysVersion from './Widgets/SysVersion';
-import Hostname from  './Widgets/Hostname';
-import MemFree  from './Widgets/MemFree';
+import Hostname from './Widgets/Hostname';
+import MemFree from './Widgets/MemFree';
 
 
 const Widgets = () => {
   const [metrics, setMetrics] = useState({});
 
 
-  
+
 
   async function fetchAPI(api_url) {
     const res = await fetch(api_url);
     const data = await res.json();
-    //console.log(data);
+    // console.log(data);
     setMetrics(data);
     return data;
   }
@@ -26,12 +26,12 @@ const Widgets = () => {
 
     const Metrics_URL = `http://${window.location.host}/api/Metrics`;
 
-    
-    fetchAPI(Metrics_URL);
-    setInterval(()=>fetchAPI(Metrics_URL),1000);
 
-    
-  
+    fetchAPI(Metrics_URL);
+    setInterval(() => fetchAPI(Metrics_URL), 1000);
+
+
+
   }, []);
 
   return (
@@ -39,14 +39,14 @@ const Widgets = () => {
       <div className="griglia">
         <div className="cpu  extendedFont">
           cpu
-          <CpuTemp temperature={metrics.temperature}/>
+          <CpuTemp temperature={metrics.temperature} />
         </div>
 
         <div className="cpu  extendedFont">
           freeRam
           <br />
           <span className="widgettino">
-            <MemFree meminfo={metrics.meminfo}/>
+            <MemFree meminfo={metrics.meminfo} />
           </span>
         </div>
 
@@ -54,13 +54,13 @@ const Widgets = () => {
           hostname
           <br />
           <span className="widgettino">
-            <Hostname hostname={metrics.hostname}/>
+            <Hostname hostname={metrics.hostname} />
           </span>
         </div>
       </div>
       <div className="cpu  extendedFont">
         version
-        <SysVersion version={metrics.version}/>
+        <SysVersion version={metrics.version} />
         <span>
         </span>
       </div>
