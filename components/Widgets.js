@@ -1,30 +1,35 @@
-import { React, useEffect, useState } from "react";
+import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
+import { React, useEffect, useState } from 'react';
 
-import CpuTemp from "./Widgets/CpuTemp";
+import CpuTemp from './Widgets/CpuTemp';
+import SysVersion from './Widgets/SysVersion';
+import Hostname from  './Widgets/Hostname';
+import MemFree  from './Widgets/MemFree';
 
-function WidgetsData() {
+
+const Widgets = () => {
+  const [metrics, setMetrics] = useState({});
+
+
   const Metrics_URL = "http://localhost:3000/api/Metrics";
 
   async function fetchAPI(api_url) {
     const res = await fetch(api_url);
     const data = await res.json();
-    // console.log(data);
+    //console.log(data);
+    setMetrics(data);
     return data;
   }
 
-  async function formatData() {}
-  const data = fetchAPI(Metrics_URL);
-  console.log(data)
-  return(data) ;
-}
-
-const Widgets = () => {
-  const [dati, setDati] = useState({});
-
 
   useEffect(() => {
+
     
+    fetchAPI(Metrics_URL);
+    setInterval(()=>fetchAPI(Metrics_URL),1000);
+
     
+  
   }, []);
 
   return (
@@ -32,26 +37,29 @@ const Widgets = () => {
       <div className="griglia">
         <div className="cpu  extendedFont">
           cpu
-          {/* <CpuTemp /> */}
+          <CpuTemp temperature={metrics.temperature}/>
         </div>
+
         <div className="cpu  extendedFont">
           freeRam
           <br />
-          <span className="widgettino">1338MB</span>
+          <span className="widgettino">
+            <MemFree meminfo={metrics.meminfo}/>
+          </span>
         </div>
+
         <div className="cpu  extendedFont">
           hostname
           <br />
-          <span className="widgettino">agpi</span>
+          <span className="widgettino">
+            <Hostname hostname={metrics.hostname}/>
+          </span>
         </div>
       </div>
       <div className="cpu  extendedFont">
         version
-        <br />
+        <SysVersion version={metrics.version}/>
         <span>
-          Linux version 5.10.17-v7l+ (dom@buildbot) (arm-linux-gnueabihf-gcc-8
-          (Ubuntu/Linaro 8.4.0-3ubuntu1) 8.4.0, GNU ld (GNU Binutils for Ubuntu)
-          2.34) #1414 SMP Fri Apr 30 13:20:47 BST 2021
         </span>
       </div>
     </div>

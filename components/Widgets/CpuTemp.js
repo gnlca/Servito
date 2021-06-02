@@ -1,26 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
 
-export default function  CpuTemp(props)  {
-  const [cpuTemp, setCpuTemp] = React.useState("");
+export default function CpuTemp(props) {
+  const [cpuTemp, setCpuTemp] = React.useState();
 
-  async function fetchCpuTemp(data) {
+  async function formattedData(data) {
     var temp = parseInt(data) / 1000;
     setCpuTemp(temp);
   }
 
-  
+
   React.useEffect(() => {
+
+    if (props.temperature != undefined) setCpuTemp(formattedData(props.temperature));
     
-    // console.log("QUESTO è CICCIO : " + Temperature());
-    // Temperature();
-    // setInterval(()=>Temperature(),2000);
-  
-    
-  }, []);
+  }, [props.temperature]);
 
   return (
     <div className="CpuTemp">
-      <span>{cpuTemp ? cpuTemp : null }°</span>
+      <span>{cpuTemp ? cpuTemp : null}°</span>
     </div>
   );
 };
