@@ -182,7 +182,9 @@ body{
 
 
 
-
+#weatherIcon {
+    margin-bottom: -1em;
+}
 
 
 .Apps ul {

@@ -6,5 +6,10 @@ module.exports = {
       });
   
       return config;
-    }
+    },
+    images: {
+      domains: ['openweathermap.org'],
+    },
   };
+
+ 
