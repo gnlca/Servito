@@ -9,7 +9,7 @@ export default function SysVersion(props) {
 
   return (
     <div className="SysVersion">
-      <span>{version}</span>
+      <span>{version.slice(0,-37)}</span>
     </div>
   );
 }
