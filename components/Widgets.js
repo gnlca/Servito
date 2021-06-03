@@ -10,6 +10,8 @@ import MemFree from './Widgets/MemFree';
 const Widgets = () => {
   const [metrics, setMetrics] = useState({});
 
+  const Metrics_URL = `/api/Metrics`;
+  
   async function fetchAPI(api_url) {
     const res = await fetch(api_url);
     const data = await res.json();
@@ -19,7 +21,6 @@ const Widgets = () => {
   }
 
   useEffect(() => {
-    const Metrics_URL = `http://${window.location.host}/api/Metrics`;
 
     fetchAPI(Metrics_URL);
     setInterval(() => fetchAPI(Metrics_URL), 1000);

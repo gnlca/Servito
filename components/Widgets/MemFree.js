@@ -13,7 +13,7 @@ const MemFree = (props) => {
             tmp = lista[i].split(/\s+/);
             formatted[tmp[0].slice(0, -1)] = [tmp[1], (tmp[2]) ? tmp[2].toUpperCase() : ""] 
         }
-        console.log(formatted);
+        // console.log(formatted);
         return formatted;
     }
     
