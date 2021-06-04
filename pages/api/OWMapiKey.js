@@ -1,15 +1,19 @@
+import { Console } from "console";
 import fs from "fs";
 import { resolve } from "path";
+import Apps from "../../components/Apps";
+
+import config from '../../UserConfig.json';
 
 export default function OWMapiKey(req, res) {
+
+
+  
+  
   if (req.query["key"]) {
-
-    fs.writeFileSync(
-        
-      __dirname + "/.env.local",
-      "NEXT_PUBLIC_WEATHER_API_KEY=" + req.query["key"],
-      function (err, data) {
-
+    config.weather_API_KEY = req.query["key"];
+    
+    fs.writeFileSync(process.cwd() + "/UserConfig.json",JSON.stringify(config), function (err, data) {
         if (err) {
           return console.log(err);
         }

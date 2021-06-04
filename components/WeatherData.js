@@ -26,12 +26,14 @@ function WeatherData() {
   function fetchLocation() {
     if (!navigator.geolocation) {
       alert("LA LOCALIZZAZIONE NON È SUPPORTATA SUL TUO BROWSER ");
+      console.log("MAMMMMMMMMMMT")
     } else {
       navigator.geolocation.getCurrentPosition((position) => {
-        return success(position);
+        return success(position,error);
       });
     }
   }
+  
 
   async function fetchWeather(api_url) {
     const data = await fetchData(api_url);
@@ -58,8 +60,13 @@ function WeatherData() {
     }
   }
 
+  function error() {
+    fetchWeather(WeatherAPI);
+  }
+  
   React.useEffect(() => {
     // console.log(weatherEmoji);
+    window.alert("MAMMT");
     fetchLocation();
   }, []);
 
@@ -67,7 +74,7 @@ function WeatherData() {
     <div className="WeatherData">
       {(temp && weather) ? (
         <span id="weather">
-          {temp}° {weather.description}  {weatherEmoji[weather.description][(new Date().getHours()<18)?"day":"night"]} {/*<Image id="weatherIcon"src={weatherIcon + weather.icon + "@2x.png"} width="30px" height="30px" />*/}  in {location}
+          {temp}° {weather.description}  {weatherEmoji[weather.description][(new Date().getHours()>=18) || (new Date().getHours()<=5)?"night":"day"]} {/*<Image id="weatherIcon"src={weatherIcon + weather.icon + "@2x.png"} width="30px" height="30px" />*/}  in {location}
           {/* in {location.city}x, {location.country}*/}.
         </span>
       ) : null}

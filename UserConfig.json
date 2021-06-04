@@ -1,11 +1,1 @@
-{
-    "weather_API_KEY" : "",
-    "apps": {
-        "Codeserver" : ["code","http://agpi.local:8443"],
-        "Homebridge" : ["homebridge","http://agpi.local:8581"],
-        "Nextcloud" : ["cloud","http://localhost:"],
-        "Portainer" : ["servers","http://agpi.local:9000"],
-        "Adguard" : ["adguard","http://agpi.local:3000"],
-        "NginxProxy" : ["proxy",""]
-    }
-}
+{"weather_API_KEY":"c847750a98296fffc1c3bf4d53664320","apps":{"Codeserver":["code","http://agpi.local:8443"],"Homebridge":["homebridge","http://agpi.local:8581"],"Nextcloud":["cloud","http://localhost:"],"Portainer":["servers","http://agpi.local:9000"],"Adguard":["adguard","http://agpi.local:3000"],"NginxProxy":["proxy",""]}}

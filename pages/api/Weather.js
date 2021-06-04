@@ -4,10 +4,13 @@ import useSWR from "swr";
 
 import axios from "axios";
 
+import config from  '../../UserConfig.json'
+
 export default async function Weather(req, res) {
   const posizione_api = "http://ip-api.com/json/";
 
-  const API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
+  // const API_KEY = process.env.NEXT_PUBLIC_WEATHER_API_KEY;
+  const API_KEY = config.weather_API_KEY;
 
   var lat = req.query["lat"] ? req.query["lat"] : null;
   var lon = req.query["lon"] ? req.query["lon"] : null;
@@ -38,6 +41,7 @@ export default async function Weather(req, res) {
     res.status(500).json({ error: "NO OPENWEATHERMAP API KEY ADDED" });
   } else {
     await fetchLocation();
+    console.log("HTML5 GEOLOCATION REFUSED, USING SERVER LOCATION");
     res.status(200).json({ temperature: await fetchWeather() });
     // res.status(500).json({ error: "No latitude and longitude provided" });
   }

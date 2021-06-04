@@ -1,41 +1,23 @@
-# Install dependencies only when needed
-FROM node:lts-alpine AS deps
-# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodelts-alpine to understand why libc6-compat might be needed.
-RUN apk add --no-cache libc6-compat
-WORKDIR /app
+FROM node:lts as dependencies
+WORKDIR /Servito
 COPY package.json  ./
-RUN yarn install --frozen-lockfile
+RUN npm install --frozen-lockfile
 
-# Rebuild the source code only when needed
-FROM node:lts-alpine AS builder
-WORKDIR /app
+FROM node:lts as builder
+WORKDIR /Servito
 COPY . .
-COPY --from=deps /app/node_modules ./node_modules
-RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
+COPY --from=dependencies /Servito/node_modules ./node_modules
+RUN npm build
 
-# Production image, copy all the files and run next
-FROM node:lts-alpine AS runner
-WORKDIR /app
-
+FROM node:lts as runner
+WORKDIR /Servito
 ENV NODE_ENV production
 
-RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
-
-# You only need to copy next.config.js if you are NOT using the default configuration
-# COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/package.json ./package.json
-
-USER nextjs
+COPY --from=builder /Servito/next.config.js ./
+COPY --from=builder /Servito/public ./public
+COPY --from=builder /Servito/.next ./.next
+COPY --from=builder /Servito/node_modules ./node_modules
+COPY --from=builder /Servito/package.json ./package.json
 
 EXPOSE 3000
-
-# Next.js collects completely anonymous telemetry data about general usage.
-# Learn more here: https://nextjs.org/telemetry
-# Uncomment the following line in case you want to disable telemetry.
-# ENV NEXT_TELEMETRY_DISABLED 1
-
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
