@@ -19,8 +19,7 @@ export default async function Weather(req, res) {
   }
 
   async function fetchLocation() {
-    var res = await fetch(posizione_api);
-    const data = await res.json();
+    var data = await fetchData(posizione_api);
     lat = data["lat"];
     lon = data["lon"];
   }

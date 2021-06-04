@@ -1,38 +1,38 @@
 {
     "clear sky": {
-        "day": "&#9728;",
-        "night": "&#127769;"
+        "day": "☀",
+        "night": "🌙"
     },
     "few clouds": {
-        "day": "&#127780;",
-        "night": "&#127780;"
+        "day": "🌤",
+        "night": "🌤"
     },
     "scattered clouds": {
-        "day": "&#9729;",
-        "night": "&#9729;"
+        "day": "⛅",
+        "night": "⛅"
     },
     "broken clouds": {
-        "day": "&#9729;",
-        "night": "&#9729;"
+        "day": "☁",
+        "night": "☁"
     },
     "shower rain": {
-        "day": "&#127780;",
-        "night": "&#9748;"
+        "day": "☔",
+        "night": "🌧"
     },
     "rain": {
-        "day": "&#127782;",
-        "night": "&#127782;"
+        "day": "🌦",
+        "night": "🌧"
     },
     "thunderstorm ": {
-        "day": "&#127785;",
-        "night": "&#127785;"
+        "day": "🌩",
+        "night": "🌩"
     },
     "snow": {
-        "day": "&#10052;",
-        "night": "&#10052;"
+        "day": "❄",
+        "night": "❄"
     },
     "mist": {
-        "day": "&#127787;",
-        "night": "&#127787;"
+        "day": "🌫",
+        "night": "🌫"
     }
 }

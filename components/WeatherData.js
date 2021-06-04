@@ -12,7 +12,6 @@ function WeatherData() {
   const [location, setLocation] = React.useState();
 
   const WeatherAPI = `/api/Weather`;
-  const posizione_api = "https://ipapi.co/json";
 
   const weatherIcon = `http://openweathermap.org/img/wn/`
 
@@ -68,7 +67,7 @@ function WeatherData() {
     <div className="WeatherData">
       {(temp && weather) ? (
         <span id="weather">
-          {temp}° {weather.description}   {weatherEmoji[weather.description][(new Date().getHours()<18)?"day":"night"]} {/*<Image id="weatherIcon"src={weatherIcon + weather.icon + "@2x.png"} width="30px" height="30px" />*/}  in {location}
+          {temp}° {weather.description}  {weatherEmoji[weather.description][(new Date().getHours()<18)?"day":"night"]} {/*<Image id="weatherIcon"src={weatherIcon + weather.icon + "@2x.png"} width="30px" height="30px" />*/}  in {location}
           {/* in {location.city}x, {location.country}*/}.
         </span>
       ) : null}
