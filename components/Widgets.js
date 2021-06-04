@@ -26,8 +26,10 @@ const Widgets = () => {
 
   return (
     <div className="Widgets grid">
-      <span class="groupTitle extendedFont">widgets</span>
-      <div className="griglia">
+      <span className="groupTitle extendedFont">widgets</span>
+      <div className="grid rowGap1">
+
+      <div className="griglia  columGap1">
         <div className="widget  extendedFont">
           <span className="widgetTitle">cpu</span>
           <br />
@@ -52,10 +54,12 @@ const Widgets = () => {
           </span>
         </div>
       </div>
+
       <div className="widget  extendedFont">
         <span className="widgetTitle">version</span>
         <SysVersion version={metrics.version} />
         <span></span>
+      </div>
       </div>
     </div>
   );

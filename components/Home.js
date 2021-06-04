@@ -12,7 +12,7 @@ export default function Home() {
 
 
     return (
-      <div className="Home grid">
+      <div className="Home grid rowGap2">
         {/* logo */}
         <Icon name="logo" width={100} height={25} fill="var(--Bianco)" />
 

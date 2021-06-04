@@ -59,7 +59,7 @@ function WeatherData() {
   }
 
   React.useEffect(() => {
-    console.log(weatherEmoji);
+    // console.log(weatherEmoji);
     fetchLocation();
   }, []);
 

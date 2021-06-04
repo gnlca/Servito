@@ -12,7 +12,7 @@
   --dark: calc(calc(var(--Luminosity) - 255) * (-1));
   --Bianco: rgb(var(--Luminosity), var(--Luminosity), var(--Luminosity));
   --Nero: rgb(var(--dark), var(--dark), var(--dark));
-  --Nsecondi: 0.3s;
+  --Nsecondi: 0.2s;
   --nuBelluVerde: #9dff1d;
   --nuBelluGrigio: #131313;
   --nuBelluGrigioChiaro: #a1a1a1;
@@ -70,7 +70,22 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
+}
+
+.columGap2{
+  column-gap: 2em;
+}
+
+.columGap1{
+  column-gap: 1em;
+}
+
+.rowGap2{
   row-gap: 2em;
+}
+
+.rowGap1{
+  row-gap: 1em;
 }
 
 
@@ -81,7 +96,7 @@ body {
 .contenitore {
 
   
-  row-gap: 3em;
+  row-gap: 2em;
 }
 
 #searchIcon {
@@ -98,13 +113,12 @@ body {
 
 .SearchBox {
   background: transparent;
-  background-color: rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.2);
+  background-color: rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.1);
   width: var(--BoxWidth);
   height: var(--BoxHeight);
   border-radius: var(--radius);
   /* border: 2px solid var(--Bianco); */
-  box-shadow: 0 2px 100px
-    rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.479);
+  box-shadow: 0 2px 100px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.2);
 
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -126,7 +140,7 @@ body {
   height: 60px;
   /* border-radius: 10px; */
   padding: 0 1em 0 1.5em;
-  box-shadow: 0 2px 50px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.329);
+  box-shadow: 0 2px 20px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.1);
   margin: 0 0 1em 0;
 }
 
@@ -202,11 +216,8 @@ body {
 }
 
 .griglia {
-  margin-top: 1em;
   display: grid;
   grid-template-columns: repeat(3, fit-content(10px));
-  column-gap: 1em;
-
   align-items: center;
   justify-items: center;
 }
@@ -214,12 +225,7 @@ body {
 /* Widgets ------------------------------------------------------ */
 
 .widget {
-  background-color: rgba(
-    var(--Luminosity),
-    var(--Luminosity),
-    var(--Luminosity),
-    0.103
-  );
+  background-color: rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity),0.08);
 
   padding: 15px 20px;
   /* border: 1px solid rgba(calc(var(--Luminosity) - 9), calc(var(--Luminosity) - 7), var(--Luminosity), 0.685); */
