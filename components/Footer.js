@@ -2,6 +2,8 @@ import React from 'react';
 
 import Icon from './Icon';
 
+import SwitchTheme from './SwitchTheme'
+
 function Footer() {
 
 
@@ -11,7 +13,7 @@ function Footer() {
     return (
       <footer className="Footer extendedFont" style={{ fontSize: "small" }}>
         <div className="footeroni">
-          <div>v0.01</div>
+          <div>v0.01 <SwitchTheme/></div>
 
           <span id="createdWith" >created with Next.js &nbsp; &#8594;</span>
           {/* <div className="instagram" style={{ fontSize: "small",  }}>

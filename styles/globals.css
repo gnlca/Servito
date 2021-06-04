@@ -28,16 +28,16 @@ html {
 body {
   /* background-color: var(--Nero);  */
 
-  background: linear-gradient(var(--Nero) 30%, var(--nuBelluGrigio) 90%)
+  /* background: linear-gradient(var(--Nero) 30%, var(--nuBelluGrigio) 90%)
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;
+  background-size: cover; */
 
-  /* background: radial-gradient(var(--nuBelluVerde) 37% , #000000 61% ) no-repeat center center fixed;
+  background: radial-gradient(var(--nuBelluGrigioChiaro) 37% , var(--Nero) 61% ) no-repeat center center fixed;
      background-size: 400% 400%;
-    background-position: 50% 0%; */
+    background-position: 50% 0%;
 
   /* max-height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)), url("../assets/img/ndrt3d.jpg") no-repeat center center fixed; 
@@ -277,6 +277,7 @@ footer {
 }
 
 #switchONOFF {
+    /* font-size: smaller;
     background-color: rgba(
     var(--Luminosity),
     var(--Luminosity),
@@ -298,14 +299,18 @@ footer {
   box-shadow: 0 2px 50px rgba(0, 0, 0, 0.089);
 
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); */
 
+  background: none;
+  border: none;
+  cursor: pointer;
   transition: var(--Nsecondi);
   
 }
 
 #switchONOFF:hover {
-  padding: 20px 25px;
+    /* font-size: large; */
+  /* padding: 15px 20px; */
 }
 
 @keyframes appear {

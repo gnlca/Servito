@@ -2,16 +2,24 @@ import Head from "next/head";
 import Image from "next/image";
 // import styles from '../styles/Home.module.css'
 
+
+import Icon from "../components/Icon";
+
+
 import SearchBox from "../components/SearchBox";
 import Apps from "../components/Apps";
 import WeatherData from "../components/WeatherData";
 import Widgets from "../components/Widgets";
-
 import Footer from "../components/Footer";
+import SwitchTheme from "../components/SwitchTheme"
 
-import Icon from "../components/Icon";
 
 const Dashboard = () => {
+
+
+  
+
+
   var today = new Date();
   var Oggi =
     today.getDate() + "." + today.getMonth() + "." + today.getFullYear();
@@ -45,13 +53,8 @@ const Dashboard = () => {
 
           {/* Widgets */}
           <Widgets />
-
-          <button  id="switchONOFF"  onClick={() => {
-              document.documentElement.style.getPropertyValue("--Luminosity") == "0" ? 
-              document.documentElement.style.setProperty("--Luminosity", "255")
-              : document.documentElement.style.setProperty("--Luminosity", "0");}}>
-              switch
-          </button>
+          
+          
         </div>
       </div>
 
