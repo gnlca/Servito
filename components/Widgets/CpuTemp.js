@@ -20,7 +20,7 @@ const CpuTemp = (props) => {
 
   return (
     <div className="CpuTemp">
-      <span>{cpuTemp ? cpuTemp : null}°</span>
+      <span>{cpuTemp ? cpuTemp : "null"}°</span>
     </div>
   );
 };

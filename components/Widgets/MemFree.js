@@ -20,8 +20,8 @@ const MemFree = (props) => {
 
 
     function formattedMemFreeData() {
-        var MB = parseInt(memInfo["MemFree"])/1000
-        return(MB + " MB")
+        var MB = parseInt(memInfo["MemFree"])/1000000
+        return(MB.toFixed(3) + " GB")
     }
 
     useEffect(() => {

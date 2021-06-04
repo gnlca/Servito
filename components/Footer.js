@@ -13,7 +13,7 @@ function Footer() {
         <div className="footeroni">
           <div>v0.01</div>
 
-          <span >created with Next.js &nbsp; &#8594;</span>
+          <span id="createdWith" >created with Next.js &nbsp; &#8594;</span>
           {/* <div className="instagram" style={{ fontSize: "small",  }}>
              <a href="http://instagram.com/gianlucandretta" style={{textDecoration:"none",color:"inherit"}}>@gianlucandretta &nbsp;</a>
              <a href="http://instagram.com/gianlucandretta"><Icon name="instagram" size={20} fill="rgba(255, 255, 255, 0.3)"/></a>

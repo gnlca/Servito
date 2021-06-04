@@ -1,17 +1,16 @@
-import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
-import { React, useEffect, useState } from 'react';
+import { loadGetInitialProps } from "next/dist/next-server/lib/utils";
+import { React, useEffect, useState } from "react";
 
-import CpuTemp from './Widgets/CpuTemp';
-import SysVersion from './Widgets/SysVersion';
-import Hostname from './Widgets/Hostname';
-import MemFree from './Widgets/MemFree';
-
+import CpuTemp from "./Widgets/CpuTemp";
+import SysVersion from "./Widgets/SysVersion";
+import Hostname from "./Widgets/Hostname";
+import MemFree from "./Widgets/MemFree";
 
 const Widgets = () => {
   const [metrics, setMetrics] = useState({});
 
   const Metrics_URL = `/api/Metrics`;
-  
+
   async function fetchAPI(api_url) {
     const res = await fetch(api_url);
     const data = await res.json();
@@ -21,41 +20,41 @@ const Widgets = () => {
   }
 
   useEffect(() => {
-
     fetchAPI(Metrics_URL);
     setInterval(() => fetchAPI(Metrics_URL), 1000);
-
   }, []);
 
   return (
     <div className="Widgets">
       <div className="griglia">
-        <div className="cpu  extendedFont">
-          cpu
-          <CpuTemp temperature={metrics.temperature} />
+        <div className="widget  extendedFont">
+          <span className="widgetTitle">cpu</span>
+          <br />
+          <span className="widgetData">
+            <CpuTemp temperature={metrics.temperature} />
+          </span>
         </div>
 
-        <div className="cpu  extendedFont">
-          freeRam
+        <div className="widget  extendedFont">
+          <span className="widgetTitle">freeRam</span>
           <br />
-          <span className="widgettino">
+          <span className="widgetData">
             <MemFree meminfo={metrics.meminfo} />
           </span>
         </div>
 
-        <div className="cpu  extendedFont">
-          hostname
+        <div className="widget  extendedFont">
+          <span className="widgetTitle">hostname</span>
           <br />
-          <span className="widgettino">
+          <span className="widgetData">
             <Hostname hostname={metrics.hostname} />
           </span>
         </div>
       </div>
-      <div className="cpu  extendedFont">
-        version
+      <div className="widget  extendedFont">
+        <span className="widgetTitle">version</span>
         <SysVersion version={metrics.version} />
-        <span>
-        </span>
+        <span></span>
       </div>
     </div>
   );
