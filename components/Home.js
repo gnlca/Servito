@@ -12,7 +12,7 @@ export default function Home() {
 
 
     return (
-      <div className="Home grid rowGap2">
+      <div className="Home grid center rowGap2">
         {/* logo */}
         <Icon name="logo" width={100} height={25} fill="var(--Bianco)" />
 
@@ -20,7 +20,7 @@ export default function Home() {
         <SearchBox />
 
         {/* Meteo */}
-        <span className="extendedFont" style={{ marginBottom: "1em" }}>
+        <span className="extendedFont" >
           <WeatherData />
         </span>
       </div>

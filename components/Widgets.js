@@ -25,7 +25,7 @@ const Widgets = () => {
   }, []);
 
   return (
-    <div className="Widgets grid">
+    <div className="Widgets grid center rowGap1 ">
       <span className="groupTitle extendedFont">widgets</span>
       <div className="grid rowGap1">
 

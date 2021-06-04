@@ -20,40 +20,22 @@ const Dashboard = () => {
 
 
   
-
+ 
 
   var today = new Date();
   var Oggi =
-    today.getDate() + "." + today.getMonth() + "." + today.getFullYear();
+  today.getDate() + "." + today.getMonth() + "." + today.getFullYear();
 
   return (
     <div>
-      <Head>
-        <title>agpi</title>
-      </Head>
-
-      <div
-        className="center ottanta"
-        onClick={() => {
-          return true;
-        }}
-      >
-        <div className="contenitore center">
-          
-
-          {/* Home */}
-          <Home/>
-
-          {/* Apps */}
-          <Apps />
-
-          {/* Widgets */}
+      <Head><title>agpi</title></Head>
+      <div className="grid center ottanta" onClick={() => { return true; }}>
+        <div className="grid center rowGap3">
+          <Home />
+          <Apps />          
           <Widgets />
-          
-          
         </div>
       </div>
-
       <Footer />
     </div>
   );

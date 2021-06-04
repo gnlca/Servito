@@ -6,7 +6,7 @@ export default function OWMapiKey(req, res) {
 
     fs.writeFileSync(
         
-      process.cwd() + "/.env",
+      __dirname + "/.env.local",
       "NEXT_PUBLIC_WEATHER_API_KEY=" + req.query["key"],
       function (err, data) {
 

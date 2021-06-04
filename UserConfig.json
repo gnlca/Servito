@@ -1,10 +1,11 @@
 {
+    "weather_API_KEY" : "",
     "apps": {
-        "code" : ["codeserver","http://agpi.local:8443"],
-        "home" : ["homebridge","http://agpi.local:8581"],
-        "cloud" : ["Drive","http://localhost:"],
-        "docker" : ["portainer","http://agpi.local:9000"],
-        "dns" : ["adguard","http://agpi.local:3000"],
-        "proxy" : ["nginx",""]
+        "Codeserver" : ["code","http://agpi.local:8443"],
+        "Homebridge" : ["homebridge","http://agpi.local:8581"],
+        "Nextcloud" : ["cloud","http://localhost:"],
+        "Portainer" : ["servers","http://agpi.local:9000"],
+        "Adguard" : ["adguard","http://agpi.local:3000"],
+        "NginxProxy" : ["proxy",""]
     }
 }

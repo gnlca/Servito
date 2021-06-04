@@ -8,11 +8,11 @@
   --Opacità: 0.6;
   --OpacitàBG: 0.3;
 
-  --Luminosity: 255;
+  --Luminosity: 0;
   --dark: calc(calc(var(--Luminosity) - 255) * (-1));
   --Bianco: rgb(var(--Luminosity), var(--Luminosity), var(--Luminosity));
   --Nero: rgb(var(--dark), var(--dark), var(--dark));
-  --Nsecondi: 0.2s;
+  --Nsecondi: 0.25s;
   --nuBelluVerde: #9dff1d;
   --nuBelluGrigio: #131313;
   --nuBelluGrigioChiaro: #a1a1a1;
@@ -21,8 +21,10 @@
 
 html {
   scroll-behavior: smooth;
-  height: 100vh;
-  width: 100%;
+  
+  
+  
+  
 }
 
 body {
@@ -35,7 +37,7 @@ body {
   -o-background-size: cover;
   background-size: cover; */
 
-  background: radial-gradient(var(--nuBelluGrigioChiaro) 37% , var(--Nero) 62% ) no-repeat center center fixed;
+  background: radial-gradient(var(--nuBelluGrigio) 37% , var(--Nero) 60% ) no-repeat center center fixed;
      background-size: 400% 400%;
     background-position: 50% 0%;
 
@@ -50,6 +52,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--Bianco);
+
+  
 }
 
 .extendedFont {
@@ -57,19 +61,17 @@ body {
 }
 
 .ottanta {
-  height: 100vh;
+  height: 95vh;
 }
 
 .center {
-  display: grid;
+  
   justify-items: center;
   align-items: center;
 }
 
 .grid {
   display: grid;
-  align-items: center;
-  justify-items: center;
 }
 
 .columGap2{
@@ -80,12 +82,21 @@ body {
   column-gap: 1em;
 }
 
-.rowGap2{
-  row-gap: 2em;
-}
+
 
 .rowGap1{
   row-gap: 1em;
+}
+
+.rowGap15{
+  row-gap: 1.5em;
+}
+
+.rowGap2{
+  row-gap: 2em;
+}
+.rowGap3{
+  row-gap: 3em;
 }
 
 
@@ -94,8 +105,6 @@ body {
 }
 
 .contenitore {
-
-  
   row-gap: 2em;
 }
 
@@ -113,12 +122,12 @@ body {
 
 .SearchBox {
   background: transparent;
-  background-color: rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.1);
+  background-color: rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.15);
   width: var(--BoxWidth);
   height: var(--BoxHeight);
   border-radius: var(--radius);
   /* border: 2px solid var(--Bianco); */
-  box-shadow: 0 2px 100px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.2);
+  box-shadow: 0 2px 100px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.35);
 
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -255,10 +264,6 @@ body {
 }
 
 .Widgets {
-  display: grid;
-  row-gap: 1em;
-  justify-items: center;
-  align-items: center;
   max-width: min-content;
 }
 
