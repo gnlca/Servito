@@ -18,7 +18,8 @@ function Apps() {
 
 
     return(
-        <div className="Apps">
+        <div className="Apps grid">
+            <span class="groupTitle extendedFont">apps</span>
             <ul>
                 <li>
                     <a href="http://agpi.local:8443">

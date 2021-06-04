@@ -3,8 +3,8 @@
 @import "../assets/Fonts/Esteso/fonts.css";
 
 :root {
-  --BoxWidth: 220px;
-  --BoxHeight: 40px;
+  --BoxWidth: 225px;
+  --BoxHeight: 45px;
   --Opacità: 0.6;
   --OpacitàBG: 0.3;
 
@@ -35,7 +35,7 @@ body {
   -o-background-size: cover;
   background-size: cover; */
 
-  background: radial-gradient(var(--nuBelluGrigioChiaro) 37% , var(--Nero) 61% ) no-repeat center center fixed;
+  background: radial-gradient(var(--nuBelluGrigioChiaro) 37% , var(--Nero) 62% ) no-repeat center center fixed;
      background-size: 400% 400%;
     background-position: 50% 0%;
 
@@ -57,7 +57,7 @@ body {
 }
 
 .ottanta {
-  height: 95vh;
+  height: 100vh;
 }
 
 .center {
@@ -66,8 +66,22 @@ body {
   align-items: center;
 }
 
-.contenitore {
+.grid {
+  display: grid;
+  align-items: center;
+  justify-items: center;
   row-gap: 2em;
+}
+
+
+.opacità {
+  opacity: var(--Opacità);
+}
+
+.contenitore {
+
+  
+  row-gap: 3em;
 }
 
 #searchIcon {
@@ -83,16 +97,12 @@ body {
 }
 
 .SearchBox {
-  background-color: rgba(
-    var(--Luminosity),
-    var(--Luminosity),
-    var(--Luminosity),
-    0.103
-  );
+  background: transparent;
+  background-color: rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.2);
   width: var(--BoxWidth);
   height: var(--BoxHeight);
   border-radius: var(--radius);
-  border: 2px solid var(--Bianco);
+  /* border: 2px solid var(--Bianco); */
   box-shadow: 0 2px 100px
     rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.479);
 
@@ -114,11 +124,10 @@ body {
 .SearchBox:hover {
   width: 480px;
   height: 60px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   padding: 0 1em 0 1.5em;
-  box-shadow: 0 2px 50px
-    rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.329);
-  margin: 1em 0 1em 0;
+  box-shadow: 0 2px 50px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.329);
+  margin: 0 0 1em 0;
 }
 
 .SearchBox:hover > .inputBox {
@@ -143,9 +152,13 @@ body {
   opacity: var(--Opacità);
 }
 
+
+
 #weatherIcon {
   margin-bottom: -1em;
 }
+
+
 
 .Apps ul {
   margin: 0;
@@ -173,6 +186,15 @@ body {
   row-gap: 0.5em;
   justify-items: center;
   align-items: center;
+  transition-property: opacity ;
+  transition: var(--Nsecondi);
+  
+}
+
+
+.Apps a:hover {
+  opacity: var(--Opacità);
+  
 }
 
 .Apps svg {
@@ -200,13 +222,7 @@ body {
   );
 
   padding: 15px 20px;
-  border: 1px solid
-    rgba(
-      calc(var(--Luminosity) - 9),
-      calc(var(--Luminosity) - 7),
-      var(--Luminosity),
-      0.685
-    );
+  /* border: 1px solid rgba(calc(var(--Luminosity) - 9), calc(var(--Luminosity) - 7), var(--Luminosity), 0.685); */
   border-radius: var(--radius);
   box-shadow: 0 2px 50px rgba(0, 0, 0, 0.089);
 
@@ -225,6 +241,7 @@ body {
 
 .widgetTitle {
   font-size: small;
+  opacity: var(--Opacità);
 }
 
 .widgetData {
@@ -277,29 +294,6 @@ footer {
 }
 
 #switchONOFF {
-    /* font-size: smaller;
-    background-color: rgba(
-    var(--Luminosity),
-    var(--Luminosity),
-    var(--Luminosity),
-    0.103
-  );
-
-  color: var(--Bianco);
-
-  padding: 10px 15px;
-  border: 1px solid
-    rgba(
-      calc(var(--Luminosity) - 9),
-      calc(var(--Luminosity) - 7),
-      var(--Luminosity),
-      0.685
-    );
-  border-radius: 70px;
-  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.089);
-
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px); */
 
   background: none;
   border: none;
@@ -308,9 +302,9 @@ footer {
   
 }
 
-#switchONOFF:hover {
-    /* font-size: large; */
-  /* padding: 15px 20px; */
+.groupTitle {
+  font-size: smaller ;
+  opacity: var(--Opacità);
 }
 
 @keyframes appear {
@@ -322,7 +316,18 @@ footer {
   }
 }
 
+
+/* @media only screen and (max-width: 900px) {
+  .contenitore {
+    grid-template-columns: repeat(1,1fr);
+  }
+
+} */
+
 @media only screen and (max-width: 600px) {
+
+  
+
   .SearchBox:hover {
     width: 280px;
     height: 50px;

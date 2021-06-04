@@ -6,12 +6,14 @@ import Image from "next/image";
 import Icon from "../components/Icon";
 
 
+import Home from '../components/Home';
 import SearchBox from "../components/SearchBox";
 import Apps from "../components/Apps";
 import WeatherData from "../components/WeatherData";
 import Widgets from "../components/Widgets";
 import Footer from "../components/Footer";
 import SwitchTheme from "../components/SwitchTheme"
+
 
 
 const Dashboard = () => {
@@ -37,16 +39,10 @@ const Dashboard = () => {
         }}
       >
         <div className="contenitore center">
-          {/* logo */}
-          <Icon name="logo" width={105} height={30} fill="var(--Bianco)" />
+          
 
-          {/* Barra di ricerca */}
-          <SearchBox />
-
-          {/* Meteo */}
-          <span className="extendedFont" style={{ marginBottom: "1em" }}>
-            <WeatherData />
-          </span>
+          {/* Home */}
+          <Home/>
 
           {/* Apps */}
           <Apps />

@@ -25,7 +25,8 @@ const Widgets = () => {
   }, []);
 
   return (
-    <div className="Widgets">
+    <div className="Widgets grid">
+      <span class="groupTitle extendedFont">widgets</span>
       <div className="griglia">
         <div className="widget  extendedFont">
           <span className="widgetTitle">cpu</span>
