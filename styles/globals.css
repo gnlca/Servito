@@ -91,6 +91,9 @@ body {
 .rowGap15{
   row-gap: 1.5em;
 }
+.rowGap25{
+  row-gap: 2.5em;
+}
 
 .rowGap2{
   row-gap: 2em;

@@ -30,7 +30,7 @@ const Dashboard = () => {
     <div>
       <Head><title>agpi</title></Head>
       <div className="grid center ottanta" onClick={() => { return true; }}>
-        <div className="grid center rowGap3">
+        <div className="grid center rowGap25">
           <Home />
           <Apps />          
           <Widgets />
