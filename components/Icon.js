@@ -13,7 +13,7 @@ const Icon = ({ name, width=16, height=width, fill="#000" }) => {
       try {
         const { default: namedImport } = await import(`../assets/img/${name}.svg`);
         ImportedIconRef.current = namedImport;
-        // console.log(ImportedIconRef.current)
+        console.log(ImportedIconRef.current)
       } catch (err) {
         throw err;
       } finally {

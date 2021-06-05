@@ -7,7 +7,7 @@ FROM node:lts as builder
 WORKDIR /Servito
 COPY . .
 COPY --from=dependencies /Servito/node_modules ./node_modules
-RUN npm build
+RUN npm run build
 
 FROM node:lts as runner
 WORKDIR /Servito
@@ -20,4 +20,4 @@ COPY --from=builder /Servito/node_modules ./node_modules
 COPY --from=builder /Servito/package.json ./package.json
 
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["yarn", "start"]

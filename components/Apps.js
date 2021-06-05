@@ -35,7 +35,7 @@ function Apps() {
     return (
       <div className="Apps grid center rowGap15">
         <span className="groupTitle extendedFont">apps</span>
-        <ul>
+        <ul className="grid center rowGap2 colGap15">
           {apps}
         </ul>
       </div>

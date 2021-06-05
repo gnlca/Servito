@@ -1,4 +1,3 @@
-import { loadGetInitialProps } from "next/dist/next-server/lib/utils";
 import { React, useEffect, useState } from "react";
 
 import CpuTemp from "./Widgets/CpuTemp";
@@ -27,9 +26,9 @@ const Widgets = () => {
   return (
     <div className="Widgets grid center rowGap1 ">
       <span className="groupTitle extendedFont">widgets</span>
-      <div className="grid rowGap1">
+      <div className="grid rowGap07">
 
-      <div className="griglia  columGap1">
+      <div className="griglia  colGap07">
         <div className="widget  extendedFont">
           <span className="widgetTitle">cpu</span>
           <br />

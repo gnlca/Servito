@@ -1,10 +1,10 @@
+import { React, useEffect, useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 // import styles from '../styles/Home.module.css'
 
 
 import Icon from "../components/Icon";
-
 
 import Home from '../components/Home';
 import SearchBox from "../components/SearchBox";
@@ -19,6 +19,10 @@ import SwitchTheme from "../components/SwitchTheme"
 const Dashboard = () => {
 
 
+
+  
+
+
   
  
 
@@ -30,7 +34,7 @@ const Dashboard = () => {
     <div>
       <Head><title>agpi</title></Head>
       <div className="grid center ottanta" onClick={() => { return true; }}>
-        <div className="grid center rowGap25">
+        <div className="grid center rowGap2">
           <Home />
           <Apps />          
           <Widgets />

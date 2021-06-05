@@ -25,30 +25,6 @@ function WeatherData() {
     return json;
   }
 
-  function fetchLocation() {
-    if (!navigator.geolocation) {
-      alert("LA LOCALIZZAZIONE NON È SUPPORTATA SUL TUO BROWSER ");
-      console.log("MAMMMMMMMMMMT")
-    } else {
-      navigator.geolocation.getCurrentPosition((position) => {
-        return success(position,error);
-      });
-    }
-  }
-  
-
-  async function fetchWeather(api_url) {
-    const data = await fetchData(api_url);
-    console.log(data);
-    setTemp(data.temperature.main.temp);
-    // setWeather(data.temperature.weather[0].description.toLowerCase());
-    setWeather({
-      description: data.temperature.weather[0].description.toLowerCase(),
-      icon: data.temperature.weather[0].icon
-    });
-    setLocation(data.temperature.name);
-  }
-
   function success(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
@@ -65,9 +41,34 @@ function WeatherData() {
   function error() {
     fetchWeather(WeatherAPI);
   }
+
+  function fetchLocation() {
+    if (!navigator.geolocation) {
+      alert("LA LOCALIZZAZIONE NON È SUPPORTATA SUL TUO BROWSER ");
+      console.log("MAMMMMMMMMMMT")
+    } else {
+      navigator.geolocation.getCurrentPosition((position) => {
+        return success(position,error);
+      });
+    }
+  }
+  
+
+  async function fetchWeather(api_url) {
+    const data = await fetchData(api_url);
+    console.log(data);
+    setTemp(data.temperature.main.temp);
+    setWeather({
+      description: data.temperature.weather[0].description.toLowerCase(),
+      icon: data.temperature.weather[0].icon
+    });
+    setLocation(data.temperature.name);
+  }
+
+  
   
   React.useEffect(() => {
-    if(!config.weather_API_KEY) {
+    if(config.weather_API_KEY === "") {
       window.alert("no weather api key added, insert at /api/OWMapiKey?key={yourKey}");
     }else {fetchLocation();}
   }, []);
@@ -76,8 +77,9 @@ function WeatherData() {
     <div className="WeatherData">
       {(temp && weather) ? (
         <span id="weather">
-          {temp}° {weather.description}  {weatherEmoji[weather.description][(new Date().getHours()>=18) || (new Date().getHours()<=5)?"night":"day"]} {/*<Image id="weatherIcon"src={weatherIcon + weather.icon + "@2x.png"} width="30px" height="30px" />*/}  in {location}
-          {/* in {location.city}x, {location.country}*/}.
+          {temp}° {weather.description}  {weatherEmoji[weather.description][(new Date().getHours()>=18) || (new Date().getHours()<=5)?"night":"day"]} 
+          {/*<Image id="weatherIcon"src={weatherIcon + weather.icon + "@2x.png"} width="30px" height="30px" />*/}  <span className="location">in {location}.</span>
+          {/* in {location.city}x, {location.country}*/}
         </span>
       ) : null}
     </div>
