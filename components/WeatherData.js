@@ -4,6 +4,8 @@ import Image from 'next/image';
 
 import weatherEmoji from './weatherEmoji.json';
 
+import config from '../UserConfig.json';
+
 function WeatherData() {
   //JSON WEATHER API
   /*const [loading, setLoading] = React.useState(true);*/
@@ -65,7 +67,9 @@ function WeatherData() {
   }
   
   React.useEffect(() => {
-    fetchLocation();
+    if(!config.weather_API_KEY) {
+      window.alert("no weather api key added, insert at /api/OWMapiKey?key={yourKey}");
+    }else {fetchLocation();}
   }, []);
 
   return (
