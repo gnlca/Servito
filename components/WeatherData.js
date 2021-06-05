@@ -65,8 +65,6 @@ function WeatherData() {
   }
   
   React.useEffect(() => {
-    // console.log(weatherEmoji);
-    window.alert("MAMMT");
     fetchLocation();
   }, []);
 

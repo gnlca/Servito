@@ -6,10 +6,7 @@ import Apps from "../../components/Apps";
 import config from '../../UserConfig.json';
 
 export default function OWMapiKey(req, res) {
-
-
-  
-  
+    
   if (req.query["key"]) {
     config.weather_API_KEY = req.query["key"];
     
