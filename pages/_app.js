@@ -12,11 +12,11 @@ function MyApp({ Component, pageProps }) {
 
 
   useEffect(()=>{
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.style.setProperty("--Luminosity", "255");
-    } else {    
-      document.documentElement.style.setProperty("--nuBelluGrigio", "#a1a1a1");
-    }
+    // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    //   document.documentElement.style.setProperty("--Luminosity", "255");
+    // } else {    
+    //   document.documentElement.style.setProperty("--nuBelluGrigio", "#a1a1a1");
+    // }
   },[])
 
 

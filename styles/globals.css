@@ -9,13 +9,13 @@
   --OpacitàMaggiore: 0.3;
 
   --Luminosity: 0;
-  --dark: calc(calc(var(--Luminosity) - 255) * (-1));
   --Bianco: rgb(var(--Luminosity), var(--Luminosity), var(--Luminosity));
+  --dark: calc(calc(var(--Luminosity) - 255) * (-1));
   --Nero: rgb(var(--dark), var(--dark), var(--dark));
   --Nsecondi: 0.25s;
   --nuBelluVerde: #9dff1d;
-  --nuBelluGrigio: #131313;
-  --nuBelluGrigioChiaro: #7e7e7e;
+  --nuBelluGrigio:   #131313;
+  --nuBelluGrigioChiaro: #a1a1a1 ;
   --radius: 8px;
 }
 

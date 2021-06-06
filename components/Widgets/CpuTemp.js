@@ -21,7 +21,7 @@ const CpuTemp = (props) => {
         <span className="widgetTitle">cpu</span>
         <br />
         <span className="widgetData">
-          {cpuTemp ? <span>cpuTemp</span> : "null"}°
+          {cpuTemp ? cpuTemp : "null"}°
         </span>
       </div>
     </div>

@@ -12,20 +12,26 @@ export default function SwitchTheme() {
     const [theme,setTheme]= useState(0)
 
     useEffect(()=>{
-      if(document.documentElement.style.getPropertyValue("--Luminosity") == "0") {
-        setTheme(0)
-      } else {setTheme(1)}
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.style.setProperty("--Luminosity", "255");
+      document.documentElement.style.setProperty("--nuBelluGrigio", "#131313");
+      setTheme(0)
+    } else {    
+      document.documentElement.style.setProperty("--Luminosity", "0");
+      document.documentElement.style.setProperty("--nuBelluGrigio", "#afafaf");
+      setTheme(1)
+    }
 
     },[])
 
     
     return(
         <a  id="switchONOFF"   onClick={() => {if(document.documentElement.style.getPropertyValue("--Luminosity") == "0") {
-          document.documentElement.style.setProperty("--Luminosity", "255")
+          document.documentElement.style.setProperty("--Luminosity", "255");
           document.documentElement.style.setProperty("--nuBelluGrigio", "#131313");
             setTheme(0);
           } else {
-            document.documentElement.style.setProperty("--Luminosity", "0")
+            document.documentElement.style.setProperty("--Luminosity", "0");
             document.documentElement.style.setProperty("--nuBelluGrigio", "#afafaf");
             setTheme(1);
           }
