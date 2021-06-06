@@ -11,6 +11,13 @@ import ToggleOFF from '../assets/img/toggleOFF.svg';
 export default function SwitchTheme() {
     const [theme,setTheme]= useState(0)
 
+    useEffect(()=>{
+      if(document.documentElement.style.getPropertyValue("--Luminosity") == "0") {
+        setTheme(0)
+      } else {setTheme(1)}
+
+    },[])
+
     
     return(
         <a  id="switchONOFF"   onClick={() => {if(document.documentElement.style.getPropertyValue("--Luminosity") == "0") {
@@ -22,6 +29,9 @@ export default function SwitchTheme() {
             document.documentElement.style.setProperty("--nuBelluGrigio", "#afafaf");
             setTheme(1);
           }
+
+          
+
           }}>
             &nbsp;
             {theme ? <ToggleON/> : <ToggleOFF />}
