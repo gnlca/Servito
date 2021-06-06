@@ -15,7 +15,8 @@ cd into the folder
 ```bash
 cd Servito/
 ```
-Personalize Servito going to the public/ folder and changing the logo, favicon and apple bookmark icon, the change the port of your apps in UserConfig.json
+Personalize Servito going to the public/ folder and changing the logo, favicon and apple bookmark icon
+The change the port of your apps in UserConfig.json
 ```json
 {
     "apps": {
@@ -62,8 +63,20 @@ sudo docker build . -t servito
 ```
 And run the container
 ```bash
-sudo docker run --name Servito --hostname [ YOUR HOSTNAME ] -p  [ EXPOSED PORT ]:3000 servito
+sudo docker run --name Servito --hostname [YOUR_HOSTNAME] -p  [EXPOSED_PORT]:3000 servito
 ```
-enjoy Servito
+### Done
+I will create a configuration page in the next release and deploy the image to docker hub
+
+### Enable weather 
+Currently using html5 geolocation that needs https to work (will use another way to retrieve location in the next release)
+Get your free api key at openweathermap.org and paste it in at
+```
+/api/OWMapiKey?key=YOUR_API_KEY
+```
+restart Servito container and you should see weather info
+
+## enjoy Servito
+
 
 @gianlucandretta Gianluca Andretta
