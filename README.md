@@ -2,7 +2,7 @@
 
 It's a dashboard written with [Next.js](https://nextjs.org/) for your server
 
-![Servito](https://user-images.githubusercontent.com/25036072/120928165-d0546600-c6e3-11eb-89f9-ae0740c534bc.png)
+![Servito](https://user-images.githubusercontent.com/25036072/120930240-bc613200-c6ec-11eb-999d-ad9e88d48c3d.png)
 
 
 ## Getting Started
@@ -66,7 +66,7 @@ And run the container
 sudo docker run --name Servito --hostname [YOUR_HOSTNAME] -p  [EXPOSED_PORT]:3000 servito
 ```
 ### Done
-I will create a configuration page in the next release and deploy the image to docker hub
+I will create a configuration page in the next release and deploy the image to docker hub for an easier install process
 
 ### Enable weather 
 Currently using html5 geolocation that needs https to work (will use another way to retrieve location in the next release)
