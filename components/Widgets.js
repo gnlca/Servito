@@ -28,37 +28,14 @@ const Widgets = () => {
       <span className="groupTitle extendedFont">widgets</span>
       <div className="grid rowGap07">
 
-      <div className="griglia  colGap07">
-        <div className="widget  extendedFont">
-          <span className="widgetTitle">cpu</span>
-          <br />
-          <span className="widgetData">
-            <CpuTemp temperature={metrics.temperature} />
-          </span>
+        <div className="griglia  colGap07">
+          <CpuTemp temperature={metrics.temperature} />
+          <MemFree meminfo={metrics.meminfo} />
+          <Hostname hostname={metrics.hostname} />
         </div>
 
-        <div className="widget  extendedFont">
-          <span className="widgetTitle">freeRam</span>
-          <br />
-          <span className="widgetData">
-            <MemFree meminfo={metrics.meminfo} />
-          </span>
-        </div>
-
-        <div className="widget  extendedFont">
-          <span className="widgetTitle">hostname</span>
-          <br />
-          <span className="widgetData">
-            <Hostname hostname={metrics.hostname} />
-          </span>
-        </div>
-      </div>
-
-      <div className="widget  extendedFont">
-        <span className="widgetTitle">version</span>
         <SysVersion version={metrics.version} />
-        <span></span>
-      </div>
+
       </div>
     </div>
   );

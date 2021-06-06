@@ -1,6 +1,6 @@
 {
     "apps": {
-        "code": [
+        "Code": [
             "code",
             "http://agpi.local:8443"
         ],
@@ -10,7 +10,7 @@
         ],
         "Nextcloud": [
             "cloud",
-            "http://localhost:"
+            "http://agpi.local:9321"
         ],
         "Portainer": [
             "servers",

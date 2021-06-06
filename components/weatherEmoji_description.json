@@ -1,40 +1,38 @@
 {
-    "01": {
+    "clear sky": {
         "day": "☀",
         "night": "🌙"
     },
-    "02": {
+    "few clouds": {
         "day": "🌤",
         "night": "🌤"
     },
-    "03": {
+    "scattered clouds": {
         "day": "⛅",
         "night": "⛅"
     },
-    "04": {
+    "broken clouds": {
         "day": "☁",
         "night": "☁"
     },
-    "09": {
+    "shower rain": {
         "day": "☔",
         "night": "🌧"
     },
-    "10": {
+    "rain": {
         "day": "🌦",
         "night": "🌧"
     },
-    "11": {
+    "thunderstorm ": {
         "day": "🌩",
         "night": "🌩"
     },
-    "13": {
+    "snow": {
         "day": "❄",
         "night": "❄"
     },
-    "50": {
+    "mist": {
         "day": "🌫",
         "night": "🌫"
     }
-    
-
 }

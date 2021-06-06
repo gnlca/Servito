@@ -3,8 +3,8 @@ import {React, useEffect, useState}  from 'react';
 
 import SearchBox from './SearchBox';
 import WeatherData from './WeatherData';
-import Icon from './Icon';
 
+import Logo from '../public/logo.svg'
 
 export default function Home() {
 
@@ -12,9 +12,9 @@ export default function Home() {
 
 
     return (
-      <div className="Home grid center rowGap2">
+      <div className="Home grid center rowGap22">
         {/* logo */}
-        <Icon name="logo" width={100} height={25} fill="var(--Bianco)" />
+        <Logo  fill="var(--Bianco)" width={100} />
 
         {/* Barra di ricerca */}
         <SearchBox />

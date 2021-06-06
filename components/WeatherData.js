@@ -75,10 +75,18 @@ function WeatherData() {
 
   return (
     <div className="WeatherData">
-      {(temp && weather) ? (
+      {temp && weather ? (
         <span id="weather">
-          {temp}° {weather.description}  {weatherEmoji[weather.description][(new Date().getHours()>=18) || (new Date().getHours()<=5)?"night":"day"]} 
-          {/*<Image id="weatherIcon"src={weatherIcon + weather.icon + "@2x.png"} width="30px" height="30px" />*/}  <span className="location">in {location}.</span>
+          {temp}° {weather.description}{" "}
+          {
+            weatherEmoji[weather.icon.slice(0,-1)][
+              new Date().getHours() >= 18 || new Date().getHours() <= 5
+                ? "night"
+                : "day"
+            ]
+          }
+          {/*<Image id="weatherIcon"src={weatherIcon + weather.icon + "@2x.png"} width="30px" height="30px" />*/}{" "}
+          <span className="location">in {location}.</span>
           {/* in {location.city}x, {location.country}*/}
         </span>
       ) : null}

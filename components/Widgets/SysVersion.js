@@ -9,7 +9,11 @@ export default function SysVersion(props) {
 
   return (
     <div className="SysVersion">
-      <span>{version}</span>
+      <div className="widget  extendedFont">
+        <span className="widgetTitle">version</span>
+        <br />
+        <span>{version}</span>
+      </div>
     </div>
   );
 }

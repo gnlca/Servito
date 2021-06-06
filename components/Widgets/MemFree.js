@@ -17,20 +17,28 @@ const MemFree = (props) => {
         return formatted;
     }
     
-
-
     function formattedMemFreeData() {
         var MB = parseInt(memInfo["MemFree"])/1000000
         return(MB.toFixed(3) + " GB")
     }
-
+    
     useEffect(() => {
-
         if (props.meminfo != undefined) setMemInfo(formattedData(props.meminfo));
-
     }, [props.meminfo]);
 
-    return (<div className="MemFree"><span style={{ whiteSpace: "nowrap" }}>{memInfo ? formattedMemFreeData() : null}</span></div>);
+    return (
+      <div className="MemFree">
+        <div className="widget  extendedFont">
+          <span className="widgetTitle">freeRam</span>
+          <br />
+          <span className="widgetData">
+            <span style={{ whiteSpace: "nowrap" }}>
+              {memInfo ? formattedMemFreeData() : null}
+            </span>
+          </span>
+        </div>
+      </div>
+    );
 
 }
 

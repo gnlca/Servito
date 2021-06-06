@@ -24,7 +24,7 @@ function Footer() {
             <a className="" href="http://github.com/gnlca/Servito" style={{textDecoration:"none",color:"inherit"}}>
               gnlca/Servito &nbsp; 
               {/* <Icon name="github" size={20} fill="rgba(255, 255, 255, 0.3)"/> */}
-              <i class="fab fa-github"></i>
+              <i className="fab fa-github" aria-hidden="true" style={{fontSize:"20px"}}/>
             </a>
           </div>
         </div>

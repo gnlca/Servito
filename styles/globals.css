@@ -15,7 +15,7 @@
   --Nsecondi: 0.25s;
   --nuBelluVerde: #9dff1d;
   --nuBelluGrigio: #131313;
-  --nuBelluGrigioChiaro: #b3b4b6;
+  --nuBelluGrigioChiaro: #7e7e7e;
   --radius: 8px;
 }
 
@@ -57,6 +57,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--Bianco);
+  
 
   
 }
@@ -117,12 +118,15 @@ body {
 .rowGap15{
   row-gap: 1.5em;
 }
-.rowGap25{
-  row-gap: 2.5em;
-}
 
 .rowGap2{
   row-gap: 2em;
+}
+.rowGap25{
+  row-gap: 2.5em;
+}
+.rowGap22{
+  row-gap: 2.2em;
 }
 .rowGap3{
   row-gap: 3em;
@@ -178,8 +182,8 @@ body {
   height: 60px;
   /* border-radius: 10px; */
   padding: 0 1em 0 1.5em;
-  box-shadow: 0 2px 20px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.1);
-  margin: 0 0 1em 0;
+  box-shadow: 0 2px 30px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.15);
+  margin: 1em 0;
 }
 
 .SearchBox:hover > .inputBox {

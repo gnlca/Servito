@@ -14,7 +14,12 @@ const Hostname = (props) => {
         <Head>
           <title>{hostname}</title>
         </Head>
-        {hostname}
+
+        <div className="widget  extendedFont">
+          <span className="widgetTitle">hostname</span>
+          <br />
+          <span className="widgetData">{hostname}</span>
+        </div>
       </div>
     );
   } else return null;
