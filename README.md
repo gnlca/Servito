@@ -1,7 +1,9 @@
 # Servito 🛎 
 
 It's a dashboard written with [Next.js](https://nextjs.org/) for your server
- 
+
+![Servito](https://user-images.githubusercontent.com/25036072/120928165-d0546600-c6e3-11eb-89f9-ae0740c534bc.png)
+
 
 ## Getting Started
 
