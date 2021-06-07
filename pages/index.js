@@ -27,7 +27,7 @@ const Dashboard = () => {
   return (
     <div>
       <Head><title>agpi</title></Head>
-      <div className="grid center ottanta" onClick={() => { return true; }}>
+      <div className="grid center fullHeight" onClick={() => { return true; }}>
         <div className="grid center rowGap2">
           <Home />
           <Apps />          

@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from "react";
 import Head from 'next/head'
 import '../styles/globals.css'
+import '../styles/layout.css'
 
 // Google Icons
 // import 'material-design-icons/iconfont/material-icons.css';

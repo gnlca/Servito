@@ -28,7 +28,7 @@ const Widgets = () => {
       <span className="groupTitle extendedFont">widgets</span>
       <div className="grid rowGap07">
 
-        <div className="griglia  colGap07">
+        <div className="grid center col3auto colGap07">
           <CpuTemp temperature={metrics.temperature} />
           <MemFree meminfo={metrics.meminfo} />
           <Hostname hostname={metrics.hostname} />

@@ -25,7 +25,7 @@ function SearchBox() {
 
 
     return(
-        <div className="SearchBox">
+        <div className="SearchBox grid alignCenter colGap07">
             
             <input type="text" value={inputValue} onChange={(e)=>setInputValue(e.target.value)} onKeyDown={(e)=>{TastoInvio(e.key);}} placeholder="cerca" className="inputBox" />
             <a id="searchIcon" onClick={()=>CercaSuGoogle()}>

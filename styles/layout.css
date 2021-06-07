@@ -1,0 +1,92 @@
+.extendedFont {
+  font-family: "Esteso";
+}
+
+.fullHeight {
+  height: 100vh;
+}
+
+.center {
+  justify-items: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+.inlineGrid {
+  display: inline-grid;
+}
+
+.colGap05 {
+  column-gap: 0.5em;
+}
+.colGap07 {
+  column-gap: 0.7em;
+}
+.colGap1 {
+  column-gap: 1em;
+}
+.colGap15 {
+  column-gap: 1.5em;
+}
+
+.colGap2 {
+  column-gap: 2em;
+}
+
+.rowGap05 {
+  row-gap: 0.5em;
+}
+
+.rowGap07 {
+  row-gap: 0.7em;
+}
+.rowGap1 {
+  row-gap: 1em;
+}
+
+.rowGap15 {
+  row-gap: 1.5em;
+}
+
+.rowGap2 {
+  row-gap: 2em;
+}
+
+.rowGap22 {
+  row-gap: 2.2em;
+}
+.rowGap25 {
+  row-gap: 2.5em;
+}
+.rowGap3 {
+  row-gap: 3em;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.justifyEnd {
+  justify-self: end;
+}
+.justifyStart {
+  justify-self: start;
+}
+
+.col3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.col3auto {
+  grid-template-columns: repeat(3, auto);
+}
+
+.row2auto {
+  grid-template-columns: repeat(3, auto);
+}
+
+.selfEnd {
+  justify-self: end;
+}
