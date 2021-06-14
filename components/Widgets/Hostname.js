@@ -15,7 +15,7 @@ const Hostname = (props) => {
           <title>{hostname}</title>
         </Head>
         <div className="Hostname widget extendedFont">
-          <span className="widgetTitle inlineGrid center col2auto colGap03">
+          <span className="widgetTitle">
             {/* <span className="fas fa-network-wired fontSmaller"></span> */}
             <span>hostname</span>
           </span>

@@ -251,7 +251,7 @@ svg {
   padding-right: 200px;
 } */
 
-.widgetTitle {
+.widgetTitle * {
   font-size: small;
   opacity: var(--Opacita);
 }
@@ -339,7 +339,7 @@ footer {
     display: none;
   }
 
-  .widgetTitle {
+  .widgetTitle *{
     font-size: x-small;
   }
 

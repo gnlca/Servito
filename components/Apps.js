@@ -34,7 +34,7 @@ function Apps() {
     return (
       <div className="Apps grid center rowGap07">
         <span className="groupTitle extendedFont">apps</span>
-        <ul className={`grid center ${(Object.keys(config.apps).length >6 ) ? "col4" : "col3"} rowGap12 colGap1`}>
+        <ul className={`grid center ${(Object.keys(config.apps).length >6 ) ? "col4" : "col3"} rowGap12 colGap15`}>
           {apps}
         </ul>
       </div>

@@ -28,7 +28,7 @@ const MemFree = (props) => {
 
     return (
       <div className="MemFree widget extendedFont ">
-        <span className="widgetTitle inlineGrid center col2auto colGap03">
+        <span className="widgetTitle">
           {/* <i className="fas fa-memory" aria-hidden="true" /> */}
           {/* <span className="material-icons-outlined fontSmall">memory</span> */}
           <span>memory</span>

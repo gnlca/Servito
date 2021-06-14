@@ -17,7 +17,7 @@ const CpuTemp = (props) => {
 
   return (
     <div className="CpuTemp widget extendedFont">
-      <span className="widgetTitle inlineGrid center col2auto colGap03">
+      <span className="widgetTitle">
         {/* <i className="fas fa-thermometer-quarter fontSmaller"  aria-hidden="true"/> */}
         <span>cpu</span>
       </span>
