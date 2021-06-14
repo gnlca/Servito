@@ -10,7 +10,7 @@ export default function SysVersion(props) {
   return (
     <div className="SysVersion widget  extendedFont">
       <span className="widgetTitle inlineGrid center col2auto colGap03 ">
-        <i className="material-icons-outlined" style={{margin:"2.3px 0 0 0"}}>info</i>
+        {/* <i className="material-icons-outlined" style={{margin:"2.3px 0 0 0"}}>info</i> */}
         <span className="">version</span>
       </span>
       <br />
