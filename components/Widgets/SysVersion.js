@@ -8,12 +8,13 @@ export default function SysVersion(props) {
   }, [props]);
 
   return (
-    <div className="SysVersion">
-      <div className="widget  extendedFont">
-        <span className="widgetTitle">version</span>
-        <br />
-        <span>{version}</span>
-      </div>
+    <div className="SysVersion widget  extendedFont">
+      <span className="widgetTitle inlineGrid center col2auto colGap03 ">
+        <i className="material-icons-outlined fontSmall" style={{margin:"2.3px 0 0 0"}}>info</i>
+        <span className="">version</span>
+      </span>
+      <br />
+      <span>{version}</span>
     </div>
   );
 }

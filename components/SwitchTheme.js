@@ -18,7 +18,7 @@ export default function SwitchTheme() {
       setTheme(0)
     } else {    
       document.documentElement.style.setProperty("--Luminosity", "0");
-      document.documentElement.style.setProperty("--nuBelluGrigio", "#afafaf");
+      document.documentElement.style.setProperty("--nuBelluGrigio", "#f3f3f3");
       setTheme(1)
     }
 
@@ -32,7 +32,7 @@ export default function SwitchTheme() {
             setTheme(0);
           } else {
             document.documentElement.style.setProperty("--Luminosity", "0");
-            document.documentElement.style.setProperty("--nuBelluGrigio", "#afafaf");
+            document.documentElement.style.setProperty("--nuBelluGrigio", "#f3f3f3");
             setTheme(1);
           }
 

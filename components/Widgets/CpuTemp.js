@@ -16,14 +16,13 @@ const CpuTemp = (props) => {
   }, [props.temperature]);
 
   return (
-    <div className="CpuTemp">
-      <div className="widget  extendedFont">
-        <span className="widgetTitle">cpu</span>
-        <br />
-        <span className="widgetData">
-          {cpuTemp ? cpuTemp : "null"}°
-        </span>
-      </div>
+    <div className="CpuTemp widget extendedFont">
+      <span className="widgetTitle inlineGrid center col2auto colGap03">
+        {/* <i className="fas fa-thermometer-quarter fontSmaller"  aria-hidden="true"/> */}
+        <span>cpu</span>
+      </span>
+      <br />
+      <span className="widgetData">{cpuTemp ? cpuTemp : "null"}°</span>
     </div>
   );
 };

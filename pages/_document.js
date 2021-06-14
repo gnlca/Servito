@@ -23,7 +23,7 @@ class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"/>
 
           {/* Font Awesome Icons */}
-          <script src="https://kit.fontawesome.com/12239df2d7.js" crossorigin="anonymous"></script>
+          <script src="https://kit.fontawesome.com/12239df2d7.js" crossOrigin="anonymous"></script>
 
           {/* <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> */}
         </Head>

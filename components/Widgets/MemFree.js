@@ -27,16 +27,18 @@ const MemFree = (props) => {
     }, [props.meminfo]);
 
     return (
-      <div className="MemFree">
-        <div className="widget  extendedFont">
-          <span className="widgetTitle">freeRam</span>
-          <br />
-          <span className="widgetData">
-            <span style={{ whiteSpace: "nowrap" }}>
-              {memInfo ? formattedMemFreeData() : null}
-            </span>
+      <div className="MemFree widget extendedFont ">
+        <span className="widgetTitle inlineGrid center col2auto colGap03">
+          {/* <i className="fas fa-memory" aria-hidden="true" /> */}
+          {/* <span className="material-icons-outlined fontSmall">memory</span> */}
+          <span>memory</span>
+        </span>
+        <br />
+        <span className="widgetData">
+          <span style={{ whiteSpace: "nowrap" }}>
+            {memInfo ? formattedMemFreeData() : null}
           </span>
-        </div>
+        </span>
       </div>
     );
 

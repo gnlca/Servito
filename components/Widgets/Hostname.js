@@ -10,17 +10,19 @@ const Hostname = (props) => {
 
   if (hostname) {
     return (
-      <div className="Hostname">
+      <>
         <Head>
           <title>{hostname}</title>
         </Head>
-
-        <div className="widget  extendedFont">
-          <span className="widgetTitle">hostname</span>
+        <div className="Hostname widget extendedFont">
+          <span className="widgetTitle inlineGrid center col2auto colGap03">
+            {/* <span className="fas fa-network-wired fontSmaller"></span> */}
+            <span>hostname</span>
+          </span>
           <br />
           <span className="widgetData">{hostname}</span>
         </div>
-      </div>
+      </>
     );
   } else return null;
 };

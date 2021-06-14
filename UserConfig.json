@@ -1,11 +1,12 @@
 {
+    "location": "Frattamaggiore",
     "apps": {
         "Code": [
             "code",
             "http://agpi.local:8443"
         ],
         "Homebridge": [
-            "homebridge",
+            "home",
             "http://agpi.local:8581"
         ],
         "Nextcloud": [
@@ -13,15 +14,15 @@
             "http://agpi.local:9321"
         ],
         "Portainer": [
-            "servers",
+            "dns",
             "http://agpi.local:9000"
         ],
         "Adguard": [
-            "adguard",
+            "gpp_good",
             "http://agpi.local:3000"
         ],
         "NginxProxy": [
-            "proxy",
+            "swap_horiz",
             ""
         ]
     }
