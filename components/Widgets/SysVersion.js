@@ -3,8 +3,12 @@ import { React, useEffect, useState } from "react";
 export default function SysVersion(props) {
   const [version, setVersion] = useState("");
 
+  function formatSysVersion(data) {
+    return((data) ? data.split(' ').slice(0,3).join(' ') : null)
+  }
+  
   useEffect(() => {
-    setVersion(props.version);
+    setVersion(formatSysVersion(props.version));
   }, [props]);
 
   return (

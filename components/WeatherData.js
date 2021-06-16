@@ -30,7 +30,18 @@ function WeatherData() {
     const json = await res.json();
     return json;
   }
-
+  
+  async function fetchWeather(api_url) {
+    const data = await fetchData(api_url);
+    console.log(data);
+    setTemp(data.temperature.main.temp);
+    setWeather({
+      description: data.temperature.weather[0].description.toLowerCase(),
+      icon: data.temperature.weather[0].icon,
+    });
+    setLocation(data.temperature.name);
+  }
+  
   function success(pos) {
     console.log("Successo");
     const lat = pos.coords.latitude;
@@ -50,6 +61,7 @@ function WeatherData() {
     if (err) fetchWeather(WeatherAPI);
   }
 
+  
   function fetchLocation() {
     if (!navigator.geolocation) {
       // window.alert("LA LOCALIZZAZIONE NON È SUPPORTATA SUL TUO BROWSER ");
@@ -62,18 +74,7 @@ function WeatherData() {
       );
     }
   }
-
-  async function fetchWeather(api_url) {
-    const data = await fetchData(api_url);
-    console.log(data);
-    setTemp(data.temperature.main.temp);
-    setWeather({
-      description: data.temperature.weather[0].description.toLowerCase(),
-      icon: data.temperature.weather[0].icon,
-    });
-    setLocation(data.temperature.name);
-  }
-
+  
   React.useEffect(() => {
     if (process.env.NEXT_PUBLIC_WEATHER_API_KEY === "") {
       window.alert("no weather api key added, insert at /api/OWMapiKey?key={yourKey}");
