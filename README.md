@@ -1,9 +1,11 @@
 # Servito 🛎 
 
 It's a dashboard written with [Next.js](https://nextjs.org/) for your server.\
-Demo → [servito.vercel.app](http://servito.vercel.app)
+
 
 ![ServitoDarkLight](https://user-images.githubusercontent.com/25036072/120935372-c130e080-c702-11eb-9716-3a9adfe5fa51.png)
+
+Demo → [servito.vercel.app](http://servito.vercel.app)
 
 
 ## How to install as a Docker container
