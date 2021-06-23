@@ -18,7 +18,7 @@ export default function SysVersion(props) {
         <span className="">version</span>
       </span>
       <br />
-      <span>{version}</span>
+      <span className="">{version}</span>
     </div>
   );
 }

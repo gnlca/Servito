@@ -20,7 +20,7 @@ const Hostname = (props) => {
             <span>hostname</span>
           </span>
           <br />
-          <span className="widgetData">{hostname}</span>
+          <span className="widgetData">{hostname ? hostname : "null"}</span>
         </div>
       </>
     );

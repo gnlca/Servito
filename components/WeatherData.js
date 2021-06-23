@@ -77,9 +77,15 @@ function WeatherData() {
   
   React.useEffect(() => {
     if (process.env.NEXT_PUBLIC_WEATHER_API_KEY === "") {
-      window.alert("no weather api key added, insert at /api/OWMapiKey?key={yourKey}");
+      window.alert(
+        "no weather api key added, insert at /api/OWMapiKey?key={yourKey}"
+      );
     } else {
-      fetchLocation();
+      if (config.location) {
+        fetchWeather(WeatherAPI);
+      } else {
+        fetchLocation();
+      }
     }
   }, []);
 
