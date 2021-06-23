@@ -8,21 +8,18 @@ const Hostname = (props) => {
     setHostname(props.hostname);
   }, [props.hostname]);
 
-  if (hostname) {
-    return (
-      <div className="Hostname widget extendedFont">
-        <Head>
-          <title>{hostname}</title>
-        </Head>
-        <span className="widgetTitle">
-          {/* <span className="fas fa-network-wired fontSmaller"></span> */}
-          <span>hostname</span>
-        </span>
-        <br />
-        <span className="widgetData">{hostname ? hostname : "null"}</span>
-      </div>
-    );
-  } else return null;
+  return (
+    <div className="Hostname widget extendedFont">
+      {hostname ? <Head><title>{hostname}</title></Head> : null}
+      
+      <span className="widgetTitle">
+        {/* <span className="fas fa-network-wired fontSmaller"></span> */}
+        <span>hostname</span>
+      </span>
+      <br />
+      <span className="widgetData">{hostname ? hostname : "null"}</span>
+    </div>
+  );
 };
 
 export default Hostname;
