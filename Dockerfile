@@ -1,18 +1,17 @@
 #Servito Dockerfile
 
-FROM node:alpine as dependencies
-RUN apk add --no-cache libc6-compat
+FROM node:slim as dependencies
 WORKDIR /Servito
 COPY package.json  ./
 RUN npm install --frozen-lockfile
 
-FROM node:alpine as builder
+FROM node:slim as builder
 WORKDIR /Servito
 COPY . .
 COPY --from=dependencies /Servito/node_modules ./node_modules
 RUN npm run build
 
-FROM node:alpine as production
+FROM node:slim as production
 WORKDIR /Servito
 ENV NODE_ENV production
 
