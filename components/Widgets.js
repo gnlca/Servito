@@ -25,7 +25,7 @@ const Widgets = () => {
 
   return (
     <div className="Widgets grid center rowGap1 maxWidthMinContent ">
-      <span className="groupTitle extendedFont">widgets</span>
+      <span className="categoryTitle extendedFont">widgets</span>
       <div className="grid rowGap07" >
 
         <div className="grid center col3 colGap07  ">

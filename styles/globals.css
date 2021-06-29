@@ -78,7 +78,6 @@ svg {
 }
 
 .SearchBox {
-  background: none;
   background-color: rgba(
     var(--Luminosity),
     var(--Luminosity),
@@ -93,9 +92,8 @@ svg {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 
-  grid-template-columns: 1fr auto;
 
-  padding: 0 0.9em 0 1em;
+  padding: 0 1em 0 1em;
 
   transition: var(--Nsecondi);
   transition-property: width, height, padding, box-shadow, margin, background-color;
@@ -104,9 +102,8 @@ svg {
 .SearchBox:hover {
   width: 480px;
   height: 60px;
-  padding: 0 1em 0 1.5em;
-  box-shadow: 0 2px 30px
-    rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.15);
+  padding: 0 1.5em 0 1.5em;
+  box-shadow: 0 2px 30px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.15);
   margin: 1em 0;
 }
 
@@ -147,7 +144,6 @@ svg {
 .Apps ul {
   margin: 0;
   padding: 0;
-  list-style-type: none;
 
   font-size: small;
 }
@@ -155,8 +151,6 @@ svg {
 
 
 .app {
-  color: inherit;
-  text-decoration: none;
 
   grid-template-rows: 1fr auto;
   
@@ -164,12 +158,10 @@ svg {
   transition: var(--Nsecondi);
 }
 
+
 .app:hover {
-  /* opacity: var(--Opacita); */
-  background-color: none;
-}
-.app:hover > a {
-  background: none;
+  opacity: var(--Opacita);
+  
 }
 
 .app a{
@@ -204,10 +196,6 @@ svg {
   
 } */
 
-.app:hover {
-  opacity: var(--Opacita);
-  
-}
 
 /* Widgets ------------------------------------------------------ */
 
@@ -221,12 +209,16 @@ svg {
   border-radius: var(--radius);
   
   
-  
   padding: 14px 20px 15px 20px;
 
   transition-property: padding;
   transition: var(--Nsecondi);
 }
+
+/* .Widgets {
+
+  filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.7));
+} */
 
 
 
@@ -243,7 +235,7 @@ svg {
   z-index: -1;
   background-color: transparent;
   border-radius: var(--radius);
-  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 2px 20px rgba(0,0,0, 0.09);
 }
 
 /* .widget:hover {
@@ -254,10 +246,12 @@ svg {
 .widgetTitle * {
   font-size: small;
   opacity: var(--Opacita);
+  
 }
 
 .widgetData {
   font-size: larger;
+  
 }
 
 
@@ -296,7 +290,7 @@ footer {
   fill: #fff;
 }
 
-.groupTitle {
+.categoryTitle {
   font-size: smaller;
   opacity: var(--Opacita);
 }

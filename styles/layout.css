@@ -1,3 +1,6 @@
+/* MY CSS FOR EASY LAYOUT - gnlca */
+
+
 .extendedFont {
   font-family: "Esteso";
 }
@@ -9,7 +12,20 @@
   font-size: smaller;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
+.maxWidth42 {
+  max-width: 42rem;
+}
+
+.noMarginPadding {
+  margin: 0;
+  padding: 0;
+}
 
 .fullHeight {
   height: 100vh;
@@ -21,11 +37,20 @@
   color: inherit;
   text-decoration: none;
 }
+.noList {
+  list-style: none;
+}
+
+.inline li {
+  display: inline;
+}
 
 .center {
   justify-items: center;
   align-items: center;
 }
+
+/* GRIDDDDD */
 
 .grid {
   display: grid;
@@ -120,6 +145,9 @@
   align-items: center;
 }
 
+.justifyCenter {
+  justify-self: center;
+}
 .justifyEnd {
   justify-self: end;
 }
@@ -137,6 +165,9 @@
 .col4 {
   grid-template-columns: repeat(4, 1fr);
 }
+.col4auto {
+  grid-template-columns: repeat(4, auto);
+}
 
 .col2auto {
   grid-template-columns: repeat(2, auto);
@@ -147,4 +178,35 @@
 
 .row2auto {
   grid-template-columns: repeat(3, auto);
+}
+
+/* FLEXXXXXX */
+
+.flex {
+  display: flex;
+}
+
+.spaceBetween {
+  justify-content: space-between;
+}
+
+.justifyContentCenter {
+  justify-content: center;
+}
+
+.floatRight {
+  float: right;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.mxAuto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flexGrow {
+  flex-grow: 1;
 }
