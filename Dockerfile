@@ -5,7 +5,7 @@ WORKDIR /Servito
 COPY package.json  ./
 RUN npm install --frozen-lockfile
 
-FROM node:slim as builder
+FROM node:16.4.2-slim as builder
 WORKDIR /Servito
 COPY . .
 COPY --from=dependencies /Servito/node_modules ./node_modules
