@@ -1,0 +1,41 @@
+:root {
+	/* luminosity (default 255) lo assegno al testo => bianco al testo, nero al bg*/
+	--luminosity: 255;
+	--dark: calc(255 - var(--luminosity));
+	--bianco: rgb(var(--luminosity), var(--luminosity), var(--luminosity));
+	--nero: rgb(var(--dark), var(--dark), var(--dark));
+	--timing: 0.25s;
+	--radius: 8px;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, sans-serif;
+}
+
+body {
+	width: 100%;
+	min-height: 100vh;
+	background-color: var(--nero);
+	color: var(--bianco);
+	fill: var(--bianco);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+p {
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}

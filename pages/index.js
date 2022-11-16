@@ -22,7 +22,7 @@ const Dashboard = () => {
 
   var today = new Date();
   var Oggi =
-  today.getDate() + "." + today.getMonth() + "." + today.getFullYear();
+    today.getDate() + "." + today.getMonth() + "." + today.getFullYear();
 
   return (
     <div>
@@ -30,7 +30,7 @@ const Dashboard = () => {
       <div className="grid center fullHeight" onClick={() => { return true; }}>
         <div className="grid center rowGap2">
           <Home />
-          <Apps />          
+          <Apps />
           <Widgets />
         </div>
       </div>

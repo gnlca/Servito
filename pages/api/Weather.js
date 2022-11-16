@@ -1,9 +1,3 @@
-import { resolve } from "path";
-
-import useSWR from "swr";
-
-import axios from "axios";
-
 import config from "../../UserConfig.json";
 
 export default async function Weather(req, res) {
