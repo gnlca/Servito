@@ -1,182 +1,183 @@
-@import "../assets/Fonts/Helvet/stylesheet.css";
-@import "../assets/Fonts/neueLTD/stylesheet.css";
-@import "../assets/Fonts/Esteso/fonts.css";
+@import '../assets/Fonts/Helvet/stylesheet.css';
+@import '../assets/Fonts/neueLTD/stylesheet.css';
+@import '../assets/Fonts/Esteso/fonts.css';
 
 :root {
-  --BoxWidth: 225px;
-  --BoxHeight: 45px;
-  --Opacita: 0.5;
-  --OpacitaMaggiore: 0.3;
+	--BoxWidth: 225px;
+	--BoxHeight: 45px;
+	--Opacita: 0.5;
+	--OpacitaMaggiore: 0.3;
 
-  --Luminosity: 0;
-  --Bianco: rgb(var(--Luminosity), var(--Luminosity), var(--Luminosity));
-  --dark: calc(calc(var(--Luminosity) - 255) * (-1));
-  --Nero: rgb(var(--dark), var(--dark), var(--dark));
-  --Nsecondi: 0.225s;
-  --nuBelluVerde: #9dff1d;
-  --nuBelluGrigio: #131313;
-  --nuBelluGrigioChiaro: #a1a1a1;
-  --radius: 8px;
+	--Luminosity: 0;
+	--Bianco: rgb(var(--Luminosity), var(--Luminosity), var(--Luminosity));
+	--dark: calc(calc(var(--Luminosity) - 255) * (-1));
+	--Nero: rgb(var(--dark), var(--dark), var(--dark));
+	--Nsecondi: 0.225s;
+	--nuBelluVerde: #9dff1d;
+	--nuBelluGrigio: #131313;
+	--nuBelluGrigioChiaro: #a1a1a1;
+	--radius: 8px;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
 }
 
 body {
-  /* background-color: var(--Nero);  */
+	width: 100%;
+	min-height: 100vh;
+	/* background-color: var(--Nero);  */
 
-  /* background: linear-gradient(var(--Nero) 30%, var(--nuBelluGrigio) 90%)
+	/* background: linear-gradient(var(--Nero) 30%, var(--nuBelluGrigio) 90%)
   no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; */
 
-  margin: 0;
-  padding: 0;
+	background: radial-gradient(var(--nuBelluGrigio) 37%, var(--Nero) 60%) no-repeat center center
+		fixed;
+	background-size: 400% 400%;
+	background-position: 50% 0%;
 
-  background: radial-gradient(var(--nuBelluGrigio) 37%, var(--Nero) 60%)
-    no-repeat center center fixed;
-  background-size: 400% 400%;
-  background-position: 50% 0%;
-
-  /* max-height: 100%;
+	/* max-height: 100%;
     background: linear-gradient(rgba(0, 0, 0, 0.5) , rgba(0, 0, 0, 0.5)), url("../assets/img/ndrt3d.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; */
 
-  /* font-family: Helvetica, sans-serif; */
-  font-family: "Helvetica";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: var(--Bianco);
+	/* font-family: Helvetica, sans-serif; */
+	font-family: 'Helvetica';
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: var(--Bianco);
 }
 
 svg {
-  fill: var(--Bianco);
-  transition-property: fill;
-  transition: var(--Nsecondi);
+	transition-property: fill;
+	transition: var(--Nsecondi);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+p {
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
 }
 
 .opacita {
-  opacity: var(--Opacita);
+	opacity: var(--Opacita);
 }
 
 #searchIcon {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 #searchIcon svg {
-  margin-top: 3px;
-  width: 18px;
-  fill: var(--Bianco);
-  transition: var(--Nsecondi);
-  transition-property: width, height, fill;
+	margin-top: 3px;
+	width: 18px;
+	fill: var(--Bianco);
+	transition: var(--Nsecondi);
+	transition-property: width, height, fill;
 }
 
 .SearchBox {
-  background-color: rgba(
-    var(--Luminosity),
-    var(--Luminosity),
-    var(--Luminosity),
-    0.15
-  );
-  width: var(--BoxWidth);
-  height: var(--BoxHeight);
-  border-radius: var(--radius);
-  box-shadow: 0 2px 50px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.20);
+	background-color: rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.15);
+	width: var(--BoxWidth);
+	height: var(--BoxHeight);
+	border-radius: var(--radius);
+	box-shadow: 0 2px 50px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.2);
 
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
 
+	padding: 0 1em 0 1em;
 
-  padding: 0 1em 0 1em;
-
-  transition: var(--Nsecondi);
-  transition-property: width, height, padding, box-shadow, margin, background-color;
+	transition: var(--Nsecondi);
+	transition-property: width, height, padding, box-shadow, margin, background-color;
 }
 
 .SearchBox:hover {
-  width: 480px;
-  height: 60px;
-  padding: 0 1.5em 0 1.5em;
-  box-shadow: 0 2px 30px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.15);
-  margin: 1em 0;
+	width: 480px;
+	height: 60px;
+	padding: 0 1.5em 0 1.5em;
+	box-shadow: 0 2px 30px rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.15);
+	margin: 1em 0;
 }
 
 .SearchBox:hover > .inputBox {
-  font-size: 160%;
+	font-size: 160%;
 }
 
 .SearchBox:hover > #searchIcon svg {
-  transition: var(--Nsecondi) !important;
-  width: 30px;
+	transition: var(--Nsecondi) !important;
+	width: 30px;
 }
 
 .inputBox {
-  background: none;
-  outline: none;
-  border: none;
-  transition: var(--Nsecondi);
-  transition-property: font-size, color;
-  color: var(--Bianco);
+	background: none;
+	outline: none;
+	border: none;
+	transition: var(--Nsecondi);
+	transition-property: font-size, color;
+	color: var(--Bianco);
 }
 
 .inputBox::placeholder {
-  color: rgba(
-    var(--Luminosity),
-    var(--Luminosity),
-    var(--Luminosity),
-    var(--Opacita)
-  );
-}
-
-.WeatherData {
-  transition-property: color;
-  transition: var(--Nsecondi);
+	color: rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), var(--Opacita));
 }
 
 /* Apps ----------------------------------------------------------*/
 
 .Apps ul {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 
-  font-size: small;
+	font-size: small;
 }
-
-
 
 .app {
+	grid-template-rows: 1fr auto;
 
-  grid-template-rows: 1fr auto;
-  
-  transition-property: opacity;
-  transition: var(--Nsecondi);
+	transition-property: opacity;
+	transition: var(--Nsecondi);
 }
-
 
 .app:hover {
-  opacity: var(--Opacita);
-  
+	opacity: var(--Opacita);
 }
 
-.app a{
-  position: relative;
-  /* background-color: rgba( var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.08 ); */
-  
-  /* -webkit-backdrop-filter: blur(10px);
+.app a {
+	position: relative;
+	/* background-color: rgba( var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.08 ); */
+
+	/* -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px); */
-  
-  border-radius: var(--radius);
-  
-  padding: 10px 10px;
-  
-  transition-property: padding;
-  transition: var(--Nsecondi);
+
+	border-radius: var(--radius);
+
+	padding: 10px 10px;
+
+	transition-property: padding;
+	transition: var(--Nsecondi);
 }
 
 /* .app a::before {
@@ -196,23 +197,21 @@ svg {
   
 } */
 
-
 /* Widgets ------------------------------------------------------ */
 
 .widget {
-  position: relative;
-  background-color: rgba( var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.08 );
+	position: relative;
+	background-color: rgba(var(--Luminosity), var(--Luminosity), var(--Luminosity), 0.08);
 
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
 
-  border-radius: var(--radius);
-  
-  
-  padding: 14px 20px 15px 20px;
+	border-radius: var(--radius);
 
-  transition-property: padding;
-  transition: var(--Nsecondi);
+	padding: 14px 20px 15px 20px;
+
+	transition-property: padding;
+	transition: var(--Nsecondi);
 }
 
 /* .Widgets {
@@ -220,22 +219,18 @@ svg {
   filter: drop-shadow(0px 0px 20px rgba(0,0,0,0.7));
 } */
 
-
-
 .widget::before {
-  
-  
-  content: "";
-  position: absolute;
-  /* inset: 0; invece di bottom left right top*/ 
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  background-color: transparent;
-  border-radius: var(--radius);
-  box-shadow: 0 2px 20px rgba(0,0,0, 0.09);
+	content: '';
+	position: absolute;
+	/* inset: 0; invece di bottom left right top*/
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	background-color: transparent;
+	border-radius: var(--radius);
+	box-shadow: 0 2px 20px rgba(0, 0, 0, 0.09);
 }
 
 /* .widget:hover {
@@ -244,64 +239,61 @@ svg {
 } */
 
 .widgetTitle * {
-  font-size: small;
-  opacity: var(--Opacita);
-  
+	font-size: small;
+	opacity: var(--Opacita);
 }
 
 .widgetData {
-  font-size: larger;
-  
+	font-size: larger;
 }
-
 
 /* footer ------------------------------------------------------ */
 
 footer {
-  background-color: #000;
-  color: #fff;
-  position: fixed;
-  overflow: auto;
+	background-color: #000;
+	color: #fff;
+	position: fixed;
+	overflow: auto;
 
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
 }
 
 .footeroni {
-  padding: 15px 20px;
-  opacity: var(--OpacitaMaggiore);
-  grid-template-columns: repeat(2, auto);
+	padding: 15px 20px;
+	opacity: var(--OpacitaMaggiore);
+	grid-template-columns: repeat(2, auto);
 }
 
 .options {
-  grid-template-columns: repeat(2, fit-content(100%));
+	grid-template-columns: repeat(2, fit-content(100%));
 }
 
 #switchONOFF {
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: var(--Nsecondi);
+	background: none;
+	border: none;
+	cursor: pointer;
+	transition: var(--Nsecondi);
 }
 
 #switchONOFF svg {
-  fill: #fff;
+	fill: #fff;
 }
 
 .categoryTitle {
-  font-size: smaller;
-  opacity: var(--Opacita);
+	font-size: smaller;
+	opacity: var(--Opacita);
 }
 
 @keyframes appear {
-  0% {
-    filter: opacity(0%);
-  }
-  100% {
-    filter: opacity(100%);
-  }
+	0% {
+		filter: opacity(0%);
+	}
+	100% {
+		filter: opacity(100%);
+	}
 }
 
 /* @media only screen and (max-width: 900px) {
@@ -312,48 +304,47 @@ footer {
 } */
 
 @media only screen and (max-width: 600px) {
-  .SearchBox:hover {
-    width: 280px;
-    height: 50px;
-  }
+	.SearchBox:hover {
+		width: 280px;
+		height: 50px;
+	}
 
-  .SearchBox:hover > .inputBox {
-    font-size: 110%;
-  }
+	.SearchBox:hover > .inputBox {
+		font-size: 110%;
+	}
 
-  .SearchBox:hover > #searchIcon svg {
-    width: 20px;
-  }
+	.SearchBox:hover > #searchIcon svg {
+		width: 20px;
+	}
 
-  .SysVersion {
-    font-size: small;
-  }
+	.SysVersion {
+		font-size: small;
+	}
 
-  #createdWith {
-    display: none;
-  }
+	#createdWith {
+		display: none;
+	}
 
-  .widgetTitle *{
-    font-size: x-small;
-  }
+	.widgetTitle * {
+		font-size: x-small;
+	}
 
-  .widgetData {
-    font-size: medium;
-  }
+	.widgetData {
+		font-size: medium;
+	}
 
-  .location {
-    display: none;
-  }
+	.location {
+		display: none;
+	}
 
-  .app {
-    font-size: smaller;
-  }
-  /* .app i {
+	.app {
+		font-size: smaller;
+	}
+	/* .app i {
     font-size: 21px;
   } */
 
-
-  .footeroni {
-    padding: 15px 20px 20px 20px;
-  }
+	.footeroni {
+		padding: 15px 20px 20px 20px;
+	}
 }

@@ -1,11 +1,9 @@
 import styled, { css } from 'styled-components';
 
-export const Center = styled.div`
+export const CenterGrid = css`
 	display: grid;
 	place-items: center;
 `;
-
-export const Container = styled.div``;
 
 export const spaceBetween = css`
 	display: flex;
@@ -20,6 +18,13 @@ export const noMarginPadding = css`
 	margin: 0;
 	padding: 0;
 `;
+
+export const Center = styled.div`
+	display: grid;
+	place-items: center;
+`;
+
+export const Container = styled.div``;
 
 export const Button = styled.button`
 	background: none;
