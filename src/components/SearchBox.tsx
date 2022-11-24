@@ -1,4 +1,4 @@
-import { ChangeEvent, KeyboardEvent, useState } from 'react';
+import { useState, type ChangeEvent, type KeyboardEvent } from 'react';
 import styled from 'styled-components';
 import SearchIcon from '../assets/img/search.svg';
 

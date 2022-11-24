@@ -1,6 +1,5 @@
-@import '../assets/Fonts/Helvet/stylesheet.css';
-@import '../assets/Fonts/neueLTD/stylesheet.css';
-@import '../assets/Fonts/Esteso/fonts.css';
+@import '../src/assets/Fonts/Helvet/stylesheet.css';
+@import '../src/assets/Fonts/Esteso/fonts.css';
 
 :root {
 	--BoxWidth: 225px;

@@ -1,9 +1,11 @@
 {
-	"extends": ["prettier", "plugin:@typescript-eslint/recommended", "next/core-web-vitals"],
-	// "parser": "@typescript-eslint/parser", // parser already used by eslint-config-next (look inside package-lock.json)
-	"plugins": ["@typescript-eslint"],
-	"rules": {
-		"@typescript-eslint/no-unused-vars": "warn",
-		"no-console": "warn"
-	}
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": "warn"
+  }
 }

@@ -1,8 +1,8 @@
-import Home from '../components/Home';
-import Apps from '../components/Apps';
-import Widgets from '../components/Widgets';
 import styled from 'styled-components';
-import { Center } from '../src/styles/common';
+import Apps from '../components/Apps';
+import Home from '../components/Home';
+import Widgets from '../components/Widgets';
+import { Center } from '../styles/common';
 
 const Dashboard = () => {
 	return (

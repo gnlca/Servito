@@ -1,4 +1,4 @@
-# Servito 🛎 
+# Servito 🛎 V2
 
 It's a dashboard written with [Next.js](https://nextjs.org/) for your server.
 

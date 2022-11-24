@@ -1,9 +1,9 @@
 import WeatherData from './WeatherData';
 
-import Logo from '../public/logo.svg';
+import Logo from '../../public/logo.svg';
 import SearchBox from './SearchBox';
 import styled from 'styled-components';
-import { CenterGrid } from '../src/styles/common';
+import { CenterGrid } from '../styles/common';
 
 export default function Home() {
 	return (

@@ -1,9 +1,8 @@
 import { useEffect, useMemo, useState } from 'react';
 
-import weatherEmoji from './weatherEmoji.json';
-
-import { fetchData } from '../src/lib/fetch';
 import styled from 'styled-components';
+import { weatherEmojis } from '../data/weatherEmojis';
+import { fetchData } from '../lib/fetch';
 
 const weatherApi = `/api/weather`;
 // const weatherIconApi = `http://openweathermap.org/img/wn/`;
@@ -23,7 +22,7 @@ export const WeatherData = () => {
 	const [weather, setWeather] = useState<Weather>({});
 	const { temperature, description, location, icon } = weather;
 
-	const icons: WeatherIcons = weatherEmoji;
+	const icons: WeatherIcons = weatherEmojis;
 
 	const daytime = useMemo(
 		() => (new Date().getHours() >= 18 || new Date().getHours() <= 5 ? 'night' : 'day'),
@@ -66,10 +65,10 @@ export const WeatherData = () => {
 
 	return (
 		<WeatherDataWrapper className="Servito__weather">
-			{temperature && description && icon && (
+			{!!weather && icons && icon && (
 				<WeatherDataText className="Servito__weather-data">
 					{`${temperature}° ${description} `}
-					{icons[icon.slice(0, -1)][daytime]}
+					{icons?.[icon.slice(0, -1)]?.[daytime]}
 					<span className="Servito__weather-data-location"> in {location}.</span>
 				</WeatherDataText>
 			)}

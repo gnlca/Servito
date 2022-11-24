@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { fetchData } from '../../src/lib/fetch';
+import { fetchData } from '../../lib/fetch';
 
-import config from '../../UserConfig.json';
+import config from '../../../UserConfig.json';
 
 export default async function Weather(req: NextApiRequest, res: NextApiResponse) {
 	const posizione_api = 'http://ip-api.com/json/';
