@@ -1,29 +1,40 @@
 {
     "location": null,
-    "apps": {
-        "Code": [
-            "code",
-            "http://agpi.local:8443"
-        ],
-        "Homebridge": [
-            "home",
-            "http://agpi.local:8581"
-        ],
-        "Nextcloud": [
-            "cloud",
-            "http://agpi.local:9321"
-        ],
-        "Portainer": [
-            "dns",
-            "http://agpi.local:9000"
-        ],
-        "Adguard": [
-            "gpp_good",
-            "http://agpi.local:3000"
-        ],
-        "NginxProxy": [
-            "swap_horiz",
-            ""
-        ]
-    }
+    "apps": [
+        {
+            "appName": "Code",
+            "iconName": "code",
+            "endpoint": "http://agpi.local:8443"
+        },
+        {
+            "appName": "Homebridge",
+            "iconName": "home",
+            "endpoint": "http://agpi.local:8581"
+        },
+        {
+            "appName": "Nextcloud",
+            "iconName": "home",
+            "endpoint": "http://agpi.local:8581"
+        },
+        {
+            "appName": "Nextcloud",
+            "iconName": "cloud",
+            "endpoint": "http://agpi.local:9321"
+        },
+        {
+            "appName": "Portainer",
+            "iconName": "dns",
+            "endpoint": "http://agpi.local:9000"
+        },
+        {
+            "appName": "Adguard",
+            "iconName": "gpp_good",
+            "endpoint": "http://agpi.local:3000"
+        },
+        {
+            "appName": "NginxProxy",
+            "iconName": "swap_horiz",
+            "endpoint": ""
+        }
+    ]
 }

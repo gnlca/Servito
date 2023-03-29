@@ -1,39 +1,38 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
-import fs from 'fs';
-import { type NextApiRequest, type NextApiResponse } from 'next';
+import fs from 'fs'
+import { type NextApiRequest, type NextApiResponse } from 'next'
 
 const metrics = async (req: NextApiRequest, res: NextApiResponse) => {
-	const paths = {
-		// temperature: "/sys/class/thermal/thermal_zone0/temp",
-		temperature: '/sys/class/thermal/thermal_zone0/temp',
-		meminfo: '/proc/meminfo',
-		hostname: '/etc/hostname',
-		version: '/proc/version',
-	};
+  const paths = {
+    temperature: '/sys/class/thermal/thermal_zone0/temp',
+    memory: '/proc/meminfo',
+    hostname: '/etc/hostname',
+    version: '/proc/version',
+  }
 
-	function fetchFile(path: string) {
-		if (fs.existsSync(path)) {
-			const data = fs.readFileSync(path, 'utf8');
+  function fetchFile(path: string) {
+    if (fs.existsSync(path)) {
+      const data = fs.readFileSync(path, 'utf8')
 
-			return data;
-		} else {
-			// res.status(500).json({ error: "FILE NON ESISTE" });
-			return null;
-		}
-	}
+      return data
+    } else {
+      // res.status(500).json({ error: "FILE NON ESISTE" });
+      return null
+    }
+  }
 
-	function fetchData(percorsi: typeof paths) {
-		const Risposta = {} as any; // TODO FIX
+  function fetchData(percorsi: typeof paths) {
+    const Risposta = {} as any // TODO FIX
 
-		for (const [key, value] of Object.entries(percorsi)) {
-			Risposta[key] = fetchFile(value);
-		}
+    for (const [key, value] of Object.entries(percorsi)) {
+      Risposta[key] = fetchFile(value)
+    }
 
-		res.status(200).json(Risposta);
-	}
+    res.status(200).json(Risposta)
+  }
 
-	fetchData(paths);
-};
+  fetchData(paths)
+}
 
-export default metrics;
+export default metrics
